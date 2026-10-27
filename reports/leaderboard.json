@@ -1,0 +1,275 @@
+{
+  "metric_notes": {
+    "accuracy": "share of clips predicted correctly",
+    "uar": "average recall over the 6 emotions (robust to class imbalance)",
+    "macro_f1": "average F1 over the 6 emotions"
+  },
+  "rows": [
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.5257192677,
+      "uar": 0.5288504623,
+      "macro_f1": 0.5215228161,
+      "n_test": 1147,
+      "n_params": 628615.0,
+      "train_seconds": 2942.4992632866,
+      "ms_per_clip": 5.1383928517
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.4768962511,
+      "uar": 0.4791641207,
+      "macro_f1": 0.4565165934,
+      "n_test": 1147,
+      "n_params": null,
+      "train_seconds": 15.3043437004,
+      "ms_per_clip": 0.1203537819
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.4986922406,
+      "uar": 0.4982076663,
+      "macro_f1": 0.4964188409,
+      "n_test": 1147,
+      "n_params": null,
+      "train_seconds": 5.845020771,
+      "ms_per_clip": 0.9972870402
+    }
+  ],
+  "runs": [
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "description": "2-layer BiLSTM + attention over mel frames",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.5257192676547515,
+          "uar": 0.5288504623406248,
+          "macro_f1": 0.5215228161142119,
+          "per_class_f1": {
+            "neutral": 0.6038781163434903,
+            "happy": 0.4032258064516129,
+            "sad": 0.5380952380952381,
+            "angry": 0.6796116504854369,
+            "fear": 0.41194029850746267,
+            "disgust": 0.49238578680203043
+          },
+          "confusion_matrix": [
+            [
+              109,
+              8,
+              24,
+              5,
+              15,
+              6
+            ],
+            [
+              16,
+              75,
+              14,
+              35,
+              33,
+              23
+            ],
+            [
+              32,
+              5,
+              113,
+              2,
+              7,
+              37
+            ],
+            [
+              7,
+              26,
+              1,
+              140,
+              4,
+              18
+            ],
+            [
+              14,
+              38,
+              47,
+              11,
+              69,
+              17
+            ],
+            [
+              16,
+              24,
+              25,
+              23,
+              11,
+              97
+            ]
+          ],
+          "ms_per_clip": 5.138392851679035
+        }
+      },
+      "n_params": 628615,
+      "train_seconds": 2942.4992632865906
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "description": "Random Forest on the same statistics",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.4768962510897995,
+          "uar": 0.47916412073811565,
+          "macro_f1": 0.45651659340039813,
+          "per_class_f1": {
+            "neutral": 0.46568627450980393,
+            "happy": 0.4166666666666667,
+            "sad": 0.5631929046563193,
+            "angry": 0.6606334841628959,
+            "fear": 0.23529411764705882,
+            "disgust": 0.39762611275964393
+          },
+          "confusion_matrix": [
+            [
+              95,
+              16,
+              16,
+              4,
+              16,
+              20
+            ],
+            [
+              39,
+              80,
+              12,
+              44,
+              9,
+              12
+            ],
+            [
+              37,
+              5,
+              127,
+              4,
+              8,
+              15
+            ],
+            [
+              3,
+              26,
+              2,
+              146,
+              8,
+              11
+            ],
+            [
+              27,
+              35,
+              62,
+              24,
+              32,
+              16
+            ],
+            [
+              40,
+              26,
+              36,
+              24,
+              3,
+              67
+            ]
+          ],
+          "ms_per_clip": 0.12035378187557044
+        }
+      },
+      "n_params": null,
+      "train_seconds": 15.304343700408936
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "description": "RBF SVM on MFCC/chroma/spectral statistics",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.4986922406277245,
+          "uar": 0.498207666300053,
+          "macro_f1": 0.49641884092031985,
+          "per_class_f1": {
+            "neutral": 0.5063291139240507,
+            "happy": 0.4496124031007752,
+            "sad": 0.5472636815920398,
+            "angry": 0.624113475177305,
+            "fear": 0.4293193717277487,
+            "disgust": 0.421875
+          },
+          "confusion_matrix": [
+            [
+              80,
+              16,
+              24,
+              8,
+              22,
+              17
+            ],
+            [
+              14,
+              87,
+              7,
+              43,
+              25,
+              20
+            ],
+            [
+              19,
+              7,
+              110,
+              5,
+              27,
+              28
+            ],
+            [
+              1,
+              21,
+              1,
+              132,
+              16,
+              25
+            ],
+            [
+              12,
+              30,
+              41,
+              14,
+              82,
+              17
+            ],
+            [
+              23,
+              30,
+              23,
+              25,
+              14,
+              81
+            ]
+          ],
+          "ms_per_clip": 0.9972870401849723
+        }
+      },
+      "n_params": null,
+      "train_seconds": 5.845020771026611
+    }
+  ]
+}

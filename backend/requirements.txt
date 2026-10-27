@@ -1,0 +1,8 @@
+# Inference only: no PyTorch, no librosa -> fits Render free tier (512 MB RAM)
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+numpy>=1.26
+scipy>=1.11
+soundfile>=0.12
+onnxruntime>=1.17

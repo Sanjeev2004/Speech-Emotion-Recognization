@@ -1,0 +1,15 @@
+# Training environment (Kaggle / Colab already have torch, numpy, pandas, sklearn, matplotlib)
+torch>=2.2
+transformers>=4.40      # wav2vec2 / HuBERT / WavLM
+numpy
+scipy
+pandas
+scikit-learn
+librosa>=0.10           # only for the hand-crafted 'stats' features
+soundfile
+joblib
+matplotlib
+tabulate
+onnx
+onnxruntime
+pytest
