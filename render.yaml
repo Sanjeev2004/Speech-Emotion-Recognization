@@ -1,0 +1,20 @@
+# Render Blueprint (no Docker): native Python runtime.
+# Render dashboard -> New -> Blueprint -> pick this repo.
+services:
+  - type: web
+    name: ser-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ALLOWED_ORIGINS
+        value: http://localhost:5173
+      - key: ALLOWED_ORIGIN_REGEX
+        value: https://.*\.vercel\.app
+      - key: ORT_THREADS
+        value: "1"
