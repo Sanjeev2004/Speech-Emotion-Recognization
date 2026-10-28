@@ -73,8 +73,12 @@ def _download(filename: str) -> Path | None:
         dest.parent.mkdir(parents=True, exist_ok=True)
         url = f"{base.rstrip('/')}/{filename}"
         print(f"[models] downloading {url}")
-        with urllib.request.urlopen(url, timeout=60) as r:
-            dest.write_bytes(r.read())
+        try:
+            with urllib.request.urlopen(url, timeout=60) as r:
+                dest.write_bytes(r.read())
+        except Exception as e:  # keep the API up; /api/health will show 0 models
+            print(f"[models] download failed: {e}")
+            return None
     return dest
 
 
