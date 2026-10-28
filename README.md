@@ -2,6 +2,8 @@
 
 Detect emotion (neutral, happy, sad, angry, fear, disgust) from a voice clip. The project trains and compares **9 models** on **2 datasets**, and serves the best small model through a **FastAPI** backend and a **React** frontend. No Docker is needed anywhere.
 
+**Live demo:** https://ser-frontend-beta.vercel.app (API: https://ser-backend-bice.vercel.app/docs)
+
 ```
                     Kaggle / Colab GPU                         Render (free)        Vercel (free)
  RAVDESS ─┐   ┌──────────────────────────────┐   ONNX file   ┌──────────────┐  JSON  ┌────────────┐
