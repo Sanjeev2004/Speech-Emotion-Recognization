@@ -34,7 +34,13 @@ app.add_middleware(CORSMiddleware, allow_origins=origins, allow_origin_regex=os.
 
 @app.get("/api/health")
 def health():
-    return {"status": "ok", "models_loaded": len(registry.models), "default_model": registry.default}
+    n = len(registry.models)
+    return {
+        "status": "ok" if n else "degraded",
+        "models_loaded": n,
+        "default_model": registry.default,
+        "model_ids": list(registry.models),
+    }
 
 
 @app.get("/api/models")

@@ -40,8 +40,29 @@ export interface LeaderboardRow {
   ms_per_clip: number | null;
 }
 
+export interface RunTestMetrics {
+  n: number;
+  accuracy: number;
+  uar: number;
+  macro_f1: number;
+  per_class_f1?: Record<string, number>;
+  confusion_matrix?: number[][];
+  ms_per_clip?: number;
+}
+
+export interface LeaderboardRun {
+  model: string;
+  kind: string;
+  description?: string;
+  train_dataset: string;
+  test: Record<string, RunTestMetrics>;
+  n_params?: number | null;
+  train_seconds?: number | null;
+}
+
 export interface Leaderboard {
   rows: LeaderboardRow[];
+  runs?: LeaderboardRun[];
   metric_notes?: Record<string, string>;
 }
 

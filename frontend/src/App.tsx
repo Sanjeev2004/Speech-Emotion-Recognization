@@ -5,6 +5,7 @@ import Compare from "./components/Compare";
 
 const TABS = { analyze: "Analyze", compare: "Model comparison", about: "How it works" } as const;
 type Tab = keyof typeof TABS;
+const GITHUB = "https://github.com/Sanjeev2004/Speech-Emotion-Recognization";
 
 export default function App() {
   const [tab, setTab] = useState<Tab>(() => (location.hash.slice(1) as Tab) in TABS ? (location.hash.slice(1) as Tab) : "analyze");
@@ -35,7 +36,12 @@ export default function App() {
         {tab === "compare" && <Compare />}
         {tab === "about" && <About />}
       </main>
-      <footer className="wrap muted small">Trained on RAVDESS and CREMA-D. Audio is processed for the prediction and not stored.</footer>
+      <footer className="wrap muted small">
+        Trained on RAVDESS and CREMA-D. Audio is processed for the prediction and not stored.{" "}
+        <a href={GITHUB} target="_blank" rel="noreferrer">
+          Source on GitHub
+        </a>
+      </footer>
     </>
   );
 }

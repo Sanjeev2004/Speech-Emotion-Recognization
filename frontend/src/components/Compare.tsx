@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { api, Leaderboard, LeaderboardRow } from "../api";
+import { api, EMOTIONS, Leaderboard, LeaderboardRow, LeaderboardRun } from "../api";
 
 type Metric = "uar" | "accuracy" | "macro_f1";
 const METRICS: { key: Metric; label: string }[] = [
@@ -15,6 +15,7 @@ export default function Compare() {
   const [error, setError] = useState("");
   const [dataset, setDataset] = useState("");
   const [metric, setMetric] = useState<Metric>("uar");
+  const [matrixModel, setMatrixModel] = useState("");
 
   useEffect(() => {
     api
@@ -36,6 +37,28 @@ export default function Compare() {
     [data, dataset, metric],
   );
   const cross = useMemo(() => crossTable(data?.rows ?? []), [data]);
+  const matrixModels = useMemo(() => modelsWithMatrix(data?.runs ?? [], dataset), [data, dataset]);
+
+  useEffect(() => {
+    if (!matrixModels.length) {
+      setMatrixModel("");
+      return;
+    }
+    if (!matrixModels.includes(matrixModel)) {
+      const preferred = matrixModels.includes("bilstm") ? "bilstm" : matrixModels[0];
+      setMatrixModel(preferred);
+    }
+  }, [matrixModels, matrixModel]);
+
+  const matrix = useMemo(() => {
+    const run = (data?.runs ?? []).find((r) => r.model === matrixModel && r.train_dataset === dataset);
+    return run?.test?.[dataset]?.confusion_matrix ?? null;
+  }, [data, matrixModel, dataset]);
+
+  const perClass = useMemo(() => {
+    const run = (data?.runs ?? []).find((r) => r.model === matrixModel && r.train_dataset === dataset);
+    return run?.test?.[dataset]?.per_class_f1 ?? null;
+  }, [data, matrixModel, dataset]);
 
   if (error)
     return (
@@ -47,6 +70,7 @@ export default function Compare() {
   if (!data) return <section className="card muted">Loading results...</section>;
 
   const best = rows[0]?.[metric] ?? 1;
+  const maxCell = matrix ? Math.max(...matrix.flat()) : 1;
 
   return (
     <>
@@ -119,7 +143,67 @@ export default function Compare() {
         </div>
       </section>
 
-      {cross.cols.length > 0 && (
+      {matrix && (
+        <section className="card">
+          <div className="row spread">
+            <h2>Confusion matrix</h2>
+            <div className="seg">
+              {matrixModels.map((m) => (
+                <button key={m} className={m === matrixModel ? "on" : ""} onClick={() => setMatrixModel(m)}>
+                  {m}
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="muted small">
+            Rows = true emotion, columns = predicted. Darker cells mean more clips. On CREMA-D, happy/angry and fear/sad
+            often confuse high-arousal or low-arousal pairs.
+          </p>
+          <div className="table-wrap">
+            <table className="cm">
+              <thead>
+                <tr>
+                  <th>true \ pred</th>
+                  {EMOTIONS.map((e) => (
+                    <th key={e} className="cap">{e}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {matrix.map((row, i) => (
+                  <tr key={EMOTIONS[i]}>
+                    <th className="cap">{EMOTIONS[i]}</th>
+                    {row.map((v, j) => (
+                      <td
+                        key={j}
+                        className={i === j ? "cm-diag" : "cm-cell"}
+                        style={{ ["--v" as string]: maxCell ? v / maxCell : 0 }}
+                      >
+                        {v}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {perClass && (
+            <ul className="bars" style={{ marginTop: 16 }}>
+              {EMOTIONS.map((e) => (
+                <li key={e}>
+                  <span className="bar-name">{e} F1</span>
+                  <span className="bar-track">
+                    <span className={`bar-fill e-${e}`} style={{ width: `${(perClass[e] ?? 0) * 100}%` }} />
+                  </span>
+                  <span className="bar-val">{fmt(perClass[e])}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
+      )}
+
+      {cross.cols.length > 0 ? (
         <section className="card">
           <h2>Cross-dataset generalisation (UAR)</h2>
           <p className="muted small">Train on one dataset, test on another. A big drop means the model learned dataset-specific recording conditions instead of emotion.</p>
@@ -151,6 +235,14 @@ export default function Compare() {
             </table>
           </div>
         </section>
+      ) : (
+        <section className="card">
+          <h2>Cross-dataset generalisation</h2>
+          <p className="muted">
+            Not in the current leaderboard yet. After the full Kaggle GPU sweep (RAVDESS + CREMA-D + combined), this table
+            fills automatically from <code>leaderboard.json</code>.
+          </p>
+        </section>
       )}
     </>
   );
@@ -162,4 +254,10 @@ function crossTable(rows: LeaderboardRow[]) {
   const models = [...new Set(pairs.map((r) => r.model))].sort();
   const map = new Map(pairs.map((r) => [`${r.model}#${r.train_dataset}|${r.test_dataset}`, r.uar]));
   return { cols, models, get: (m: string, c: string) => map.get(`${m}#${c}`) };
+}
+
+function modelsWithMatrix(runs: LeaderboardRun[], dataset: string): string[] {
+  return runs
+    .filter((r) => r.train_dataset === dataset && r.test?.[dataset]?.confusion_matrix)
+    .map((r) => r.model);
 }

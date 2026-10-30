@@ -1,11 +1,25 @@
 # Speech Emotion Recognition
 
+[![CI](https://github.com/Sanjeev2004/Speech-Emotion-Recognization/actions/workflows/ci.yml/badge.svg)](https://github.com/Sanjeev2004/Speech-Emotion-Recognization/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Live demo](https://img.shields.io/badge/demo-Vercel-black)](https://ser-frontend-beta.vercel.app)
+[![UAR](https://img.shields.io/badge/CREMA--D%20UAR-0.529-informational)](reports/leaderboard.md)
+
 Detect the emotion in a voice clip: **neutral, happy, sad, angry, fear or disgust**.
 
-This project trains and compares 9 machine learning models on two public emotional-speech datasets. It then serves the best small model through a FastAPI backend and a React web app. Nothing needs Docker. Training runs on a free Kaggle GPU, and the app runs on Vercel's free tier.
+This project trains and compares machine learning models on two public emotional-speech datasets (9 architectures in the registry). It serves the best small model through a FastAPI backend and a React web app. Training runs on a free Kaggle GPU; the app runs on Vercel's free tier (or locally via Docker Compose).
 
-**Live demo:** https://ser-frontend-beta.vercel.app
-**API docs (Swagger):** https://ser-backend-bice.vercel.app/docs
+**Live demo:** https://ser-frontend-beta.vercel.app  
+**API docs (Swagger):** https://ser-backend-bice.vercel.app/docs  
+**Resume / interview kit:** [docs/RESUME.md](docs/RESUME.md)
+
+### Quick demo (screenshot)
+
+| Analyze | Model comparison |
+|---|---|
+| Record or upload speech → six emotion probabilities | Leaderboard, confusion matrix, cross-dataset table |
+
+*(Tip for your portfolio: record a 20–40 s screen capture of Analyze → Result → Comparison and drop the GIF next to this section.)*
 
 ---
 
@@ -168,7 +182,11 @@ flowchart LR
 ```
 Speech-Emotion-Recognization/
 ├── README.md
-├── render.yaml                      Render config (alternative backend host, no Docker)
+├── LICENSE                          MIT
+├── docker-compose.yml               One-command local demo (backend + frontend)
+├── docs/RESUME.md                   Resume bullets and interview talking points
+├── .github/workflows/ci.yml         Backend / frontend / ML CI
+├── render.yaml                      Render config (alternative backend host)
 ├── reports/                         Leaderboard and charts from the latest training run
 │   ├── leaderboard.md / .csv / .json
 │   └── uar_by_model.png
@@ -379,7 +397,7 @@ The original TensorFlow notebook (`notebooks/legacy/`) reached about **22%** tes
 - Python 3.10+
 - Node.js 18+
 - Git
-- No Docker
+- Docker Desktop (optional, for one-command demo)
 
 ### Clone
 
@@ -387,6 +405,19 @@ The original TensorFlow notebook (`notebooks/legacy/`) reached about **22%** tes
 git clone https://github.com/Sanjeev2004/Speech-Emotion-Recognization.git
 cd Speech-Emotion-Recognization
 ```
+
+### Option A: Docker Compose (fastest demo)
+
+```bash
+docker compose up --build
+```
+
+- App: http://localhost:5173  
+- API docs: http://localhost:8000/docs  
+
+The backend image ships the ONNX model from `backend/models/`; no `MODEL_BASE_URL` needed.
+
+### Option B: Backend + frontend without Docker
 
 ### Backend
 
@@ -417,7 +448,8 @@ cd ml
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-pytest -q                                          # smoke test, no datasets needed
+pytest -q -m "not slow"                            # fast unit checks (CI)
+pytest -q                                          # full smoke: trains 6 models + ONNX export
 ```
 
 Download the datasets (Kaggle links in [section 6](#6-datasets)), then run:
@@ -498,7 +530,7 @@ Base URL (production): `https://ser-backend-bice.vercel.app`. Interactive docs a
 
 | Method | Path | Purpose |
 |---|---|---|
-| GET | `/api/health` | Server status and number of loaded models |
+| GET | `/api/health` | `status` (`ok` / `degraded`), models loaded, default id, `model_ids` |
 | GET | `/api/models` | Loaded models with description and test scores |
 | GET | `/api/results` | The leaderboard JSON used by the comparison page |
 | POST | `/api/predict` | Predict emotion from an audio file |
@@ -556,19 +588,28 @@ curl -F "file=@hello.wav" https://ser-backend-bice.vercel.app/api/predict
   - Record (up to 10 s) or upload.
   - Preview the audio and pick a model.
   - See the top emotion, the confidence and all 6 probabilities.
+  - Recent predictions in browser `localStorage` (export CSV / clear); audio itself is not stored.
   - If the free server is waking up, the page shows a notice.
 - **Model comparison:**
   - Filter by training dataset and metric (UAR, accuracy, macro-F1).
-  - Ranked bars, a details table (params, train time, speed) and a cross-dataset table.
+  - Ranked bars, details table, interactive confusion matrix + per-class F1, and cross-dataset table when present.
 - **How it works:** the pipeline steps, the model families and the datasets.
 
-**Config:** `VITE_API_URL` is the backend URL used in production builds. Leave it empty locally.
+**Config:** `VITE_API_URL` is the backend URL used in production builds. Leave it empty locally (Vite proxies `/api`).
 
 ---
 
 ## 17. Deployment
 
-### Current setup: Vercel (no Docker)
+### Reliability notes
+
+1. Prefer shipping `backend/models/*.onnx` with the deploy artifact (Docker Compose and Render do this by default).
+2. If the host strips large binaries, set `MODEL_BASE_URL` to the **`main`** branch raw folder (not a short-lived feature branch):
+   `https://raw.githubusercontent.com/Sanjeev2004/Speech-Emotion-Recognization/main/backend/models`
+3. Check `/api/health`: `status` is `ok` when models load, `degraded` when none loaded; `model_ids` lists what is available.
+4. Free Vercel/Render cold starts: expect the first request after idle to take longer; the UI shows a wake-up notice.
+
+### Current setup: Vercel
 
 | Project | Root | Framework | URL |
 |---|---|---|---|
@@ -579,7 +620,7 @@ Settings:
 
 - **Backend environment:**
   - `ALLOWED_ORIGIN_REGEX = https://.*\.vercel\.app`
-  - `MODEL_BASE_URL = https://raw.githubusercontent.com/Sanjeev2004/Speech-Emotion-Recognization/full-project/backend/models`
+  - `MODEL_BASE_URL = https://raw.githubusercontent.com/Sanjeev2004/Speech-Emotion-Recognization/main/backend/models`
 - **Frontend environment:** `VITE_API_URL = https://ser-backend-bice.vercel.app`
 
 To deploy your own copy from GitHub:
@@ -587,11 +628,7 @@ To deploy your own copy from GitHub:
 1. Vercel -> Add New Project -> import the repo -> set **Root Directory** to `backend` -> deploy.
 2. Repeat with root `frontend`, and set `VITE_API_URL` to the backend URL.
 
-Vercel functions sleep when idle. The first request after a pause takes a few seconds while the model loads.
-
-> If the branch named in `MODEL_BASE_URL` is merged and deleted, change the variable to point at `main`. Alternatively, deploy from Git so the `.onnx` file is part of the upload and the variable is not needed.
-
-### Alternative: Render (no Docker)
+### Alternative: Render
 
 `render.yaml` describes a native Python web service (`rootDir: backend`, `uvicorn app.main:app`).
 
@@ -600,13 +637,30 @@ Vercel functions sleep when idle. The first request after a pause takes a few se
 
 The free tier has 512 MB RAM, which is enough for the spectrogram models.
 
+### Docker (self-host)
+
+```bash
+docker compose up --build -d
+```
+
+Expose ports 5173 (UI) and 8000 (API). Set `ALLOWED_ORIGINS` on the backend service if you put a custom domain in front.
+
 ---
 
 ## 18. Testing
 
+GitHub Actions (`.github/workflows/ci.yml`) runs on every push/PR:
+
+- Backend `pytest`
+- Frontend `npm run build`
+- ML `pytest -m "not slow"` (manifest, splits, log-mel; skips full train smoke)
+
+Locally:
+
 ```bash
-cd ml && pytest -q        # synthetic dataset: manifest + split, log-mel shape, trains 6 models, compare, ONNX export
-cd backend && pytest -q   # /api/health, /api/models, /api/results, /api/predict, bad audio, features in sync
+cd ml && pytest -q -m "not slow"   # fast
+cd ml && pytest -q                 # full: trains 6 models, compare, ONNX export
+cd backend && pytest -q            # /api/health, models, results, predict, features in sync
 cd frontend && npm run build
 ```
 

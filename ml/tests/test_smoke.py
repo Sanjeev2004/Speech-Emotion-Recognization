@@ -60,6 +60,7 @@ def test_logmel_shape():
     assert abs(float(feat.mean())) < 1e-3
 
 
+@pytest.mark.slow
 @pytest.mark.parametrize("model", ["svm", "random_forest", "cnn2d", "cnn_lstm", "crnn_attention", "bilstm"])
 def test_train_each_model(data, tmp_path_factory, model):
     out = tmp_path_factory.getbasetemp() / "runs"
@@ -72,6 +73,7 @@ def test_train_each_model(data, tmp_path_factory, model):
     assert res["test"]["combined"]["accuracy"] > 1 / 6      # better than chance
 
 
+@pytest.mark.slow
 def test_compare_and_export(tmp_path_factory):
     base = tmp_path_factory.getbasetemp()
     df = compare.build_report(base / "runs", base / "reports")

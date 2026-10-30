@@ -63,22 +63,40 @@ class Registry:
 
 def _download(filename: str) -> Path | None:
     """Optional: fetch a model file from MODEL_BASE_URL (e.g. the raw GitHub folder) into /tmp.
-    Used when the hosting upload does not include the binary .onnx files."""
+    Used when the hosting upload does not include the binary .onnx files.
+
+    Prefer shipping .onnx in MODEL_DIR (Docker / Render / Vercel with the file present).
+    Set MODEL_BASE_URL to a stable branch, e.g.:
+      https://raw.githubusercontent.com/<user>/<repo>/main/backend/models
+    """
     base = os.getenv("MODEL_BASE_URL")
     if not base:
+        print(f"[models] missing {filename} and MODEL_BASE_URL is unset; skip")
         return None
+    import urllib.error
     import urllib.request
+
     dest = Path(os.getenv("MODEL_CACHE_DIR", "/tmp/ser-models")) / filename
-    if not dest.exists():
-        dest.parent.mkdir(parents=True, exist_ok=True)
-        url = f"{base.rstrip('/')}/{filename}"
-        print(f"[models] downloading {url}")
-        try:
-            with urllib.request.urlopen(url, timeout=60) as r:
-                dest.write_bytes(r.read())
-        except Exception as e:  # keep the API up; /api/health will show 0 models
-            print(f"[models] download failed: {e}")
+    if dest.exists() and dest.stat().st_size > 0:
+        return dest
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    url = f"{base.rstrip('/')}/{filename}"
+    print(f"[models] downloading {url}")
+    try:
+        with urllib.request.urlopen(url, timeout=60) as r:
+            data = r.read()
+        if not data:
+            print(f"[models] download empty: {url}")
             return None
+        tmp = dest.with_suffix(dest.suffix + ".partial")
+        tmp.write_bytes(data)
+        tmp.replace(dest)
+    except urllib.error.HTTPError as e:
+        print(f"[models] download HTTP {e.code} for {url}")
+        return None
+    except Exception as e:  # keep the API up; /api/health will show 0 models
+        print(f"[models] download failed ({type(e).__name__}): {e}")
+        return None
     return dest
 
 
