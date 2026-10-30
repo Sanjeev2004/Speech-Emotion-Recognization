@@ -20,7 +20,12 @@ def scan_ravdess(root: str | Path) -> pd.DataFrame:
     """RAVDESS name: 03-01-05-01-02-01-12.wav
     modality-channel-EMOTION-intensity-statement-repetition-ACTOR"""
     rows = []
+    seen = set()
     for p in sorted(Path(root).rglob("*.wav")):
+        # The Kaggle copy ships every file twice (Actor_xx/ and audio_speech_actors_01-24/Actor_xx/)
+        if p.name in seen:
+            continue
+        seen.add(p.name)
         parts = p.stem.split("-")
         if len(parts) != 7:
             continue

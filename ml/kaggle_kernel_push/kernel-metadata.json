@@ -1,0 +1,18 @@
+{
+  "id": "salangsanjeev/ser-train-all-models-t4",
+  "title": "SER Train All Models T4",
+  "code_file": "train_on_kaggle.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "dataset_sources": [
+    "uwrfkaggler/ravdess-emotional-speech-audio",
+    "ejlok1/cremad"
+  ],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}
