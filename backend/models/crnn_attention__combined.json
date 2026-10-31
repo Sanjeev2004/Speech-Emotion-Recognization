@@ -1,0 +1,22 @@
+{
+  "id": "crnn_attention__combined",
+  "model": "crnn_attention",
+  "description": "CNN + BiGRU + attention pooling",
+  "train_dataset": "combined",
+  "input": "logmel",
+  "input_name": "logmel",
+  "emotions": [
+    "neutral",
+    "happy",
+    "sad",
+    "angry",
+    "fear",
+    "disgust"
+  ],
+  "sample_rate": 16000,
+  "clip_seconds": 3.0,
+  "n_params": 749223,
+  "test_accuracy": 0.6470143613000756,
+  "test_uar": 0.6499976032978622,
+  "size_mb": 3.0
+}

@@ -13,6 +13,8 @@ ml/data/
 *.pt
 *.joblib
 *.zip
+reports/kaggle_kernel_output/
+reports/kaggle_kernel_output_v2/
 
 # Node
 frontend/node_modules/
@@ -24,3 +26,4 @@ Thumbs.db
 .vscode/
 .idea/
 .ipynb_checkpoints/
+reports/kaggle_run.log

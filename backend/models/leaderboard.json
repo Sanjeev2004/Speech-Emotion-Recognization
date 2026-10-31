@@ -8,28 +8,743 @@
     {
       "model": "bilstm",
       "kind": "deep",
-      "train_dataset": "cremad",
+      "train_dataset": "combined",
       "test_dataset": "cremad",
-      "accuracy": 0.5257192677,
-      "uar": 0.5288504623,
-      "macro_f1": 0.5215228161,
+      "accuracy": 0.5579773322,
+      "uar": 0.5592794004,
+      "macro_f1": 0.5548588899,
       "n_test": 1147,
       "n_params": 628615.0,
-      "train_seconds": 2942.4992632866,
-      "ms_per_clip": 5.1383928517
+      "train_seconds": 168.2616035938,
+      "ms_per_clip": 0.1195383363
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.5625,
+      "uar": 0.53125,
+      "macro_f1": 0.5148459224,
+      "n_test": 176,
+      "n_params": 628615.0,
+      "train_seconds": 168.2616035938,
+      "ms_per_clip": 0.1243447716
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.5585789872,
+      "uar": 0.5590787077,
+      "macro_f1": 0.5556784238,
+      "n_test": 1323,
+      "n_params": 628615.0,
+      "train_seconds": 168.2616035938,
+      "ms_per_clip": 0.1140711259
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.5632083697,
+      "uar": 0.5658580798,
+      "macro_f1": 0.5590296781,
+      "n_test": 1147,
+      "n_params": 628615.0,
+      "train_seconds": 149.031733036,
+      "ms_per_clip": 0.1189690002
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.2272727273,
+      "uar": 0.21875,
+      "macro_f1": 0.1421929024,
+      "n_test": 176,
+      "n_params": 628615.0,
+      "train_seconds": 149.031733036,
+      "ms_per_clip": 0.125837597
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.5185185185,
+      "uar": 0.5219537916,
+      "macro_f1": 0.5139680233,
+      "n_test": 1323,
+      "n_params": 628615.0,
+      "train_seconds": 149.031733036,
+      "ms_per_clip": 0.1158321435
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.2109851787,
+      "uar": 0.2103598925,
+      "macro_f1": 0.179323218,
+      "n_test": 1147,
+      "n_params": 628615.0,
+      "train_seconds": 23.3524553776,
+      "ms_per_clip": 0.12094723
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.6022727273,
+      "uar": 0.59375,
+      "macro_f1": 0.5836049258,
+      "n_test": 176,
+      "n_params": 628615.0,
+      "train_seconds": 23.3524553776,
+      "ms_per_clip": 0.1266747713
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.2630385488,
+      "uar": 0.2613963187,
+      "macro_f1": 0.248009324,
+      "n_test": 1323,
+      "n_params": 628615.0,
+      "train_seconds": 23.3524553776,
+      "ms_per_clip": 0.1136916024
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.6294681779,
+      "uar": 0.6321082325,
+      "macro_f1": 0.6275719559,
+      "n_test": 1147,
+      "n_params": 1174182.0,
+      "train_seconds": 457.5386748314,
+      "ms_per_clip": 0.3242563349
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.7102272727,
+      "uar": 0.7135416667,
+      "macro_f1": 0.6886440346,
+      "n_test": 176,
+      "n_params": 1174182.0,
+      "train_seconds": 457.5386748314,
+      "ms_per_clip": 0.3162906928
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.6402116402,
+      "uar": 0.6434186559,
+      "macro_f1": 0.6369921245,
+      "n_test": 1323,
+      "n_params": 1174182.0,
+      "train_seconds": 457.5386748314,
+      "ms_per_clip": 0.3259133319
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.5841325196,
+      "uar": 0.5847896045,
+      "macro_f1": 0.5828169318,
+      "n_test": 1147,
+      "n_params": 1174182.0,
+      "train_seconds": 281.2567472458,
+      "ms_per_clip": 0.3250630503
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.3409090909,
+      "uar": 0.3125,
+      "macro_f1": 0.2200292398,
+      "n_test": 176,
+      "n_params": 1174182.0,
+      "train_seconds": 281.2567472458,
+      "ms_per_clip": 0.3182034601
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.5517762661,
+      "uar": 0.5519605023,
+      "macro_f1": 0.5465942657,
+      "n_test": 1323,
+      "n_params": 1174182.0,
+      "train_seconds": 281.2567472458,
+      "ms_per_clip": 0.3186492242
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.2205754141,
+      "uar": 0.2164650291,
+      "macro_f1": 0.1393024408,
+      "n_test": 1147,
+      "n_params": 1174182.0,
+      "train_seconds": 33.9249520302,
+      "ms_per_clip": 0.3123906974
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.5625,
+      "uar": 0.5572916667,
+      "macro_f1": 0.531330252,
+      "n_test": 176,
+      "n_params": 1174182.0,
+      "train_seconds": 33.9249520302,
+      "ms_per_clip": 0.3079419786
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.2660619803,
+      "uar": 0.2603657367,
+      "macro_f1": 0.210014176,
+      "n_test": 1323,
+      "n_params": 1174182.0,
+      "train_seconds": 33.9249520302,
+      "ms_per_clip": 0.32399463
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.6303400174,
+      "uar": 0.6325155811,
+      "macro_f1": 0.6296523,
+      "n_test": 1147,
+      "n_params": 1341094.0,
+      "train_seconds": 442.5325379372,
+      "ms_per_clip": 0.3192029835
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.7102272727,
+      "uar": 0.7291666667,
+      "macro_f1": 0.7066141116,
+      "n_test": 176,
+      "n_params": 1341094.0,
+      "train_seconds": 442.5325379372,
+      "ms_per_clip": 0.3124746409
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.6409674981,
+      "uar": 0.6441496501,
+      "macro_f1": 0.6407530285,
+      "n_test": 1323,
+      "n_params": 1341094.0,
+      "train_seconds": 442.5325379372,
+      "ms_per_clip": 0.3128976238
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.5928509154,
+      "uar": 0.5946219805,
+      "macro_f1": 0.5906899419,
+      "n_test": 1147,
+      "n_params": 1341094.0,
+      "train_seconds": 243.7069225311,
+      "ms_per_clip": 0.3242093579
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.3579545455,
+      "uar": 0.3333333333,
+      "macro_f1": 0.2566803774,
+      "n_test": 176,
+      "n_params": 1341094.0,
+      "train_seconds": 243.7069225311,
+      "ms_per_clip": 0.3201419657
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.5623582766,
+      "uar": 0.5641716997,
+      "macro_f1": 0.5600358909,
+      "n_test": 1323,
+      "n_params": 1341094.0,
+      "train_seconds": 243.7069225311,
+      "ms_per_clip": 0.3253184569
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.2789886661,
+      "uar": 0.2874658846,
+      "macro_f1": 0.2555027972,
+      "n_test": 1147,
+      "n_params": 1341094.0,
+      "train_seconds": 53.5760695934,
+      "ms_per_clip": 0.3173752463
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.6931818182,
+      "uar": 0.6979166667,
+      "macro_f1": 0.6874205802,
+      "n_test": 176,
+      "n_params": 1341094.0,
+      "train_seconds": 53.5760695934,
+      "ms_per_clip": 0.3059018742
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.3340891912,
+      "uar": 0.3439507238,
+      "macro_f1": 0.3254307465,
+      "n_test": 1323,
+      "n_params": 1341094.0,
+      "train_seconds": 53.5760695934,
+      "ms_per_clip": 0.3122292228
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.6338273758,
+      "uar": 0.6365075971,
+      "macro_f1": 0.6327356198,
+      "n_test": 1147,
+      "n_params": 749223.0,
+      "train_seconds": 279.8073220253,
+      "ms_per_clip": 0.3026153278
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.7329545455,
+      "uar": 0.7291666667,
+      "macro_f1": 0.7264232295,
+      "n_test": 176,
+      "n_params": 749223.0,
+      "train_seconds": 279.8073220253,
+      "ms_per_clip": 0.30834431
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.6470143613,
+      "uar": 0.6499976033,
+      "macro_f1": 0.6458831087,
+      "n_test": 1323,
+      "n_params": 749223.0,
+      "train_seconds": 279.8073220253,
+      "ms_per_clip": 0.3130911699
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.6259808195,
+      "uar": 0.6272302334,
+      "macro_f1": 0.6264118569,
+      "n_test": 1147,
+      "n_params": 749223.0,
+      "train_seconds": 308.5147070885,
+      "ms_per_clip": 0.3094650292
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.3977272727,
+      "uar": 0.375,
+      "macro_f1": 0.3019999504,
+      "n_test": 176,
+      "n_params": 749223.0,
+      "train_seconds": 308.5147070885,
+      "ms_per_clip": 0.3094957633
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.5956160242,
+      "uar": 0.5966949478,
+      "macro_f1": 0.5952201953,
+      "n_test": 1323,
+      "n_params": 749223.0,
+      "train_seconds": 308.5147070885,
+      "ms_per_clip": 0.312570902
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.2781168265,
+      "uar": 0.280856654,
+      "macro_f1": 0.2388304024,
+      "n_test": 1147,
+      "n_params": 749223.0,
+      "train_seconds": 44.9538502693,
+      "ms_per_clip": 0.3015726883
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.6647727273,
+      "uar": 0.6770833333,
+      "macro_f1": 0.6480770271,
+      "n_test": 176,
+      "n_params": 749223.0,
+      "train_seconds": 44.9538502693,
+      "ms_per_clip": 0.3055036068
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.3295540438,
+      "uar": 0.3327341578,
+      "macro_f1": 0.308225996,
+      "n_test": 1323,
+      "n_params": 749223.0,
+      "train_seconds": 44.9538502693,
+      "ms_per_clip": 0.314796863
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.7401918047,
+      "uar": 0.7423163876,
+      "macro_f1": 0.7408815033,
+      "n_test": 1147,
+      "n_params": 94570131.0,
+      "train_seconds": 1624.3042390347,
+      "ms_per_clip": 5.5035596946
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.7613636364,
+      "uar": 0.7604166667,
+      "macro_f1": 0.7528035582,
+      "n_test": 176,
+      "n_params": 94570131.0,
+      "train_seconds": 1624.3042390347,
+      "ms_per_clip": 5.5382603949
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.7430083144,
+      "uar": 0.7455301505,
+      "macro_f1": 0.7431462646,
+      "n_test": 1323,
+      "n_params": 94570131.0,
+      "train_seconds": 1624.3042390347,
+      "ms_per_clip": 5.527226022
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.7279860506,
+      "uar": 0.7295256426,
+      "macro_f1": 0.7284846621,
+      "n_test": 1147,
+      "n_params": 94570131.0,
+      "train_seconds": 1432.4977507591,
+      "ms_per_clip": 5.5588813273
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.6875,
+      "uar": 0.703125,
+      "macro_f1": 0.6793689859,
+      "n_test": 176,
+      "n_params": 94570131.0,
+      "train_seconds": 1432.4977507591,
+      "ms_per_clip": 5.5250186812
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.7226001512,
+      "uar": 0.7250742978,
+      "macro_f1": 0.7224872731,
+      "n_test": 1323,
+      "n_params": 94570131.0,
+      "train_seconds": 1432.4977507591,
+      "ms_per_clip": 5.5960729459
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.4176111595,
+      "uar": 0.409527883,
+      "macro_f1": 0.3736096084,
+      "n_test": 1147,
+      "n_params": 94570131.0,
+      "train_seconds": 199.3518149853,
+      "ms_per_clip": 5.5693046051
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.8011363636,
+      "uar": 0.796875,
+      "macro_f1": 0.7960475693,
+      "n_test": 176,
+      "n_params": 94570131.0,
+      "train_seconds": 199.3518149853,
+      "ms_per_clip": 5.6102871895
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.4686318972,
+      "uar": 0.4580696961,
+      "macro_f1": 0.440796495,
+      "n_test": 1323,
+      "n_params": 94570131.0,
+      "train_seconds": 199.3518149853,
+      "ms_per_clip": 5.5842131083
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.4751525719,
+      "uar": 0.4767251212,
+      "macro_f1": 0.4583506439,
+      "n_test": 1147,
+      "n_params": null,
+      "train_seconds": 21.9518682957,
+      "ms_per_clip": 0.1667161142
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.4204545455,
+      "uar": 0.390625,
+      "macro_f1": 0.3691380014,
+      "n_test": 176,
+      "n_params": null,
+      "train_seconds": 21.9518682957,
+      "ms_per_clip": 0.9265176275
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.4678760393,
+      "uar": 0.4688428722,
+      "macro_f1": 0.4531266066,
+      "n_test": 1323,
+      "n_params": null,
+      "train_seconds": 21.9518682957,
+      "ms_per_clip": 0.1519011082
     },
     {
       "model": "random_forest",
       "kind": "classical",
       "train_dataset": "cremad",
       "test_dataset": "cremad",
-      "accuracy": 0.4768962511,
-      "uar": 0.4791641207,
-      "macro_f1": 0.4565165934,
+      "accuracy": 0.4734088928,
+      "uar": 0.4748767771,
+      "macro_f1": 0.4543514964,
       "n_test": 1147,
       "n_params": null,
-      "train_seconds": 15.3043437004,
-      "ms_per_clip": 0.1203537819
+      "train_seconds": 18.3317255974,
+      "ms_per_clip": 0.1595315459
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.2215909091,
+      "uar": 0.203125,
+      "macro_f1": 0.1108232585,
+      "n_test": 176,
+      "n_params": null,
+      "train_seconds": 18.3317255974,
+      "ms_per_clip": 0.8299283006
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.4399092971,
+      "uar": 0.4414365833,
+      "macro_f1": 0.4195556184,
+      "n_test": 1323,
+      "n_params": null,
+      "train_seconds": 18.3317255974,
+      "ms_per_clip": 0.143357145
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.2205754141,
+      "uar": 0.2151360544,
+      "macro_f1": 0.1296611972,
+      "n_test": 1147,
+      "n_params": null,
+      "train_seconds": 2.2617599964,
+      "ms_per_clip": 0.1503816354
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.5113636364,
+      "uar": 0.4791666667,
+      "macro_f1": 0.4742052946,
+      "n_test": 176,
+      "n_params": null,
+      "train_seconds": 2.2617599964,
+      "ms_per_clip": 0.8554174141
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.2592592593,
+      "uar": 0.2510904995,
+      "macro_f1": 0.196491674,
+      "n_test": 1323,
+      "n_params": null,
+      "train_seconds": 2.2617599964,
+      "ms_per_clip": 0.1371649297
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.4873583261,
+      "uar": 0.4871532445,
+      "macro_f1": 0.4863779936,
+      "n_test": 1147,
+      "n_params": null,
+      "train_seconds": 8.5820007324,
+      "ms_per_clip": 1.6909541518
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.4602272727,
+      "uar": 0.421875,
+      "macro_f1": 0.3942531072,
+      "n_test": 176,
+      "n_params": null,
+      "train_seconds": 8.5820007324,
+      "ms_per_clip": 1.6557831656
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.4837490552,
+      "uar": 0.4822164701,
+      "macro_f1": 0.4824319777,
+      "n_test": 1323,
+      "n_params": null,
+      "train_seconds": 8.5820007324,
+      "ms_per_clip": 1.6320065306
     },
     {
       "model": "svm",
@@ -41,11 +756,515 @@
       "macro_f1": 0.4964188409,
       "n_test": 1147,
       "n_params": null,
-      "train_seconds": 5.845020771,
-      "ms_per_clip": 0.9972870402
+      "train_seconds": 6.4470009804,
+      "ms_per_clip": 1.4493024755
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.2670454545,
+      "uar": 0.2552083333,
+      "macro_f1": 0.208120959,
+      "n_test": 176,
+      "n_params": null,
+      "train_seconds": 6.4470009804,
+      "ms_per_clip": 1.4498884028
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.4678760393,
+      "uar": 0.4672250983,
+      "macro_f1": 0.4643480585,
+      "n_test": 1323,
+      "n_params": null,
+      "train_seconds": 6.4470009804,
+      "ms_per_clip": 1.4337291343
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.2240627724,
+      "uar": 0.2203093812,
+      "macro_f1": 0.1570887874,
+      "n_test": 1147,
+      "n_params": null,
+      "train_seconds": 0.1243367195,
+      "ms_per_clip": 0.209129262
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.4715909091,
+      "uar": 0.4375,
+      "macro_f1": 0.4244634052,
+      "n_test": 176,
+      "n_params": null,
+      "train_seconds": 0.1243367195,
+      "ms_per_clip": 0.2155683257
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.2569916856,
+      "uar": 0.2508747963,
+      "macro_f1": 0.2099360586,
+      "n_test": 1323,
+      "n_params": null,
+      "train_seconds": 0.1243367195,
+      "ms_per_clip": 0.2102604979
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.7157802964,
+      "uar": 0.717325553,
+      "macro_f1": 0.7171050554,
+      "n_test": 1147,
+      "n_params": 94570131.0,
+      "train_seconds": 1976.1260056496,
+      "ms_per_clip": 5.5187698437
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.7556818182,
+      "uar": 0.75,
+      "macro_f1": 0.7428308091,
+      "n_test": 176,
+      "n_params": 94570131.0,
+      "train_seconds": 1976.1260056496,
+      "ms_per_clip": 5.5352286859
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.7210884354,
+      "uar": 0.7227135462,
+      "macro_f1": 0.7214143371,
+      "n_test": 1323,
+      "n_params": 94570131.0,
+      "train_seconds": 1976.1260056496,
+      "ms_per_clip": 5.554912312
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.7175239756,
+      "uar": 0.7181402501,
+      "macro_f1": 0.7189153561,
+      "n_test": 1147,
+      "n_params": 94570131.0,
+      "train_seconds": 1741.5785241127,
+      "ms_per_clip": 5.5223155666
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.5738636364,
+      "uar": 0.5833333333,
+      "macro_f1": 0.5483257083,
+      "n_test": 176,
+      "n_params": 94570131.0,
+      "train_seconds": 1741.5785241127,
+      "ms_per_clip": 5.5273730646
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.6984126984,
+      "uar": 0.6997052056,
+      "macro_f1": 0.699403732,
+      "n_test": 1323,
+      "n_params": 94570131.0,
+      "train_seconds": 1741.5785241127,
+      "ms_per_clip": 5.5557994886
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.4106364429,
+      "uar": 0.4012485234,
+      "macro_f1": 0.3685576409,
+      "n_test": 1147,
+      "n_params": 94570131.0,
+      "train_seconds": 260.4897525311,
+      "ms_per_clip": 5.5322333222
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.7386363636,
+      "uar": 0.75,
+      "macro_f1": 0.7299918518,
+      "n_test": 176,
+      "n_params": 94570131.0,
+      "train_seconds": 260.4897525311,
+      "ms_per_clip": 5.5508532307
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.4542705971,
+      "uar": 0.4427427859,
+      "macro_f1": 0.4234992897,
+      "n_test": 1323,
+      "n_params": 94570131.0,
+      "train_seconds": 260.4897525311,
+      "ms_per_clip": 5.5534115184
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "cremad",
+      "accuracy": 0.7297297297,
+      "uar": 0.7281253819,
+      "macro_f1": 0.7322860924,
+      "n_test": 1147,
+      "n_params": 94580355.0,
+      "train_seconds": 1366.2574396133,
+      "ms_per_clip": 6.5644043055
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "ravdess",
+      "accuracy": 0.7727272727,
+      "uar": 0.7447916667,
+      "macro_f1": 0.748356656,
+      "n_test": 176,
+      "n_params": 94580355.0,
+      "train_seconds": 1366.2574396133,
+      "ms_per_clip": 6.5766369755
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "combined",
+      "test_dataset": "combined",
+      "accuracy": 0.7354497354,
+      "uar": 0.7324681239,
+      "macro_f1": 0.7363441066,
+      "n_test": 1323,
+      "n_params": 94580355.0,
+      "train_seconds": 1366.2574396133,
+      "ms_per_clip": 6.5969907237
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "cremad",
+      "accuracy": 0.7244986922,
+      "uar": 0.7228756772,
+      "macro_f1": 0.7278210954,
+      "n_test": 1147,
+      "n_params": 94580355.0,
+      "train_seconds": 1424.1825346947,
+      "ms_per_clip": 6.5413248882
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "ravdess",
+      "accuracy": 0.625,
+      "uar": 0.625,
+      "macro_f1": 0.5944055502,
+      "n_test": 176,
+      "n_params": 94580355.0,
+      "train_seconds": 1424.1825346947,
+      "ms_per_clip": 6.5987706184
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "cremad",
+      "test_dataset": "combined",
+      "accuracy": 0.7112622827,
+      "uar": 0.7094358163,
+      "macro_f1": 0.7142284775,
+      "n_test": 1323,
+      "n_params": 94580355.0,
+      "train_seconds": 1424.1825346947,
+      "ms_per_clip": 6.5929613957
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "cremad",
+      "accuracy": 0.4768962511,
+      "uar": 0.4674986761,
+      "macro_f1": 0.4508882081,
+      "n_test": 1147,
+      "n_params": 94580355.0,
+      "train_seconds": 229.0599679947,
+      "ms_per_clip": 6.5958813781
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "ravdess",
+      "accuracy": 0.8238636364,
+      "uar": 0.8229166667,
+      "macro_f1": 0.8210338393,
+      "n_test": 176,
+      "n_params": 94580355.0,
+      "train_seconds": 229.0599679947,
+      "ms_per_clip": 6.6089738499
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "train_dataset": "ravdess",
+      "test_dataset": "combined",
+      "accuracy": 0.5238095238,
+      "uar": 0.5117917745,
+      "macro_f1": 0.501051483,
+      "n_test": 1323,
+      "n_params": 94580355.0,
+      "train_seconds": 229.0599679947,
+      "ms_per_clip": 6.5872813388
     }
   ],
   "runs": [
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "description": "2-layer BiLSTM + attention over mel frames",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.5579773321708805,
+          "uar": 0.5592794003829077,
+          "macro_f1": 0.5548588899261649,
+          "per_class_f1": {
+            "neutral": 0.6355140186915887,
+            "happy": 0.45429362880886426,
+            "sad": 0.5467625899280576,
+            "angry": 0.6988505747126437,
+            "fear": 0.4584527220630373,
+            "disgust": 0.5352798053527981
+          },
+          "confusion_matrix": [
+            [
+              102,
+              10,
+              24,
+              6,
+              15,
+              10
+            ],
+            [
+              10,
+              82,
+              14,
+              39,
+              29,
+              22
+            ],
+            [
+              20,
+              4,
+              114,
+              3,
+              16,
+              39
+            ],
+            [
+              4,
+              22,
+              1,
+              152,
+              2,
+              15
+            ],
+            [
+              6,
+              25,
+              47,
+              19,
+              80,
+              19
+            ],
+            [
+              12,
+              22,
+              21,
+              20,
+              11,
+              110
+            ]
+          ],
+          "ms_per_clip": 0.11953833629072701
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.5625,
+          "uar": 0.53125,
+          "macro_f1": 0.514845922449732,
+          "per_class_f1": {
+            "neutral": 0.2222222222222222,
+            "happy": 0.5352112676056338,
+            "sad": 0.3404255319148936,
+            "angry": 0.7777777777777778,
+            "fear": 0.5757575757575758,
+            "disgust": 0.6376811594202898
+          },
+          "confusion_matrix": [
+            [
+              3,
+              8,
+              2,
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              19,
+              1,
+              1,
+              9,
+              1
+            ],
+            [
+              6,
+              5,
+              8,
+              2,
+              5,
+              6
+            ],
+            [
+              0,
+              0,
+              0,
+              28,
+              0,
+              4
+            ],
+            [
+              1,
+              3,
+              4,
+              2,
+              19,
+              3
+            ],
+            [
+              0,
+              4,
+              0,
+              6,
+              0,
+              22
+            ]
+          ],
+          "ms_per_clip": 0.12434477155858821
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.5585789871504158,
+          "uar": 0.5590787076982072,
+          "macro_f1": 0.5556784237921253,
+          "per_class_f1": {
+            "neutral": 0.603448275862069,
+            "happy": 0.4675925925925926,
+            "sad": 0.5258620689655172,
+            "angry": 0.7100591715976331,
+            "fear": 0.4771084337349398,
+            "disgust": 0.55
+          },
+          "confusion_matrix": [
+            [
+              105,
+              18,
+              26,
+              7,
+              16,
+              11
+            ],
+            [
+              11,
+              101,
+              15,
+              40,
+              38,
+              23
+            ],
+            [
+              26,
+              9,
+              122,
+              5,
+              21,
+              45
+            ],
+            [
+              4,
+              22,
+              1,
+              180,
+              2,
+              19
+            ],
+            [
+              7,
+              28,
+              51,
+              21,
+              99,
+              22
+            ],
+            [
+              12,
+              26,
+              21,
+              26,
+              11,
+              132
+            ]
+          ],
+          "ms_per_clip": 0.11407112588687819
+        }
+      },
+      "n_params": 628615,
+      "train_seconds": 168.2616035938263
+    },
     {
       "model": "bilstm",
       "kind": "deep",
@@ -54,72 +1273,3072 @@
       "test": {
         "cremad": {
           "n": 1147,
-          "accuracy": 0.5257192676547515,
-          "uar": 0.5288504623406248,
-          "macro_f1": 0.5215228161142119,
+          "accuracy": 0.5632083696599826,
+          "uar": 0.5658580797588496,
+          "macro_f1": 0.5590296781279583,
           "per_class_f1": {
-            "neutral": 0.6038781163434903,
-            "happy": 0.4032258064516129,
-            "sad": 0.5380952380952381,
-            "angry": 0.6796116504854369,
-            "fear": 0.41194029850746267,
-            "disgust": 0.49238578680203043
+            "neutral": 0.6511627906976745,
+            "happy": 0.4486486486486487,
+            "sad": 0.592964824120603,
+            "angry": 0.6774193548387096,
+            "fear": 0.42318840579710143,
+            "disgust": 0.5607940446650124
           },
           "confusion_matrix": [
             [
-              109,
+              112,
+              7,
+              15,
+              6,
+              19,
+              8
+            ],
+            [
+              17,
+              83,
+              9,
+              41,
+              27,
+              19
+            ],
+            [
+              19,
               8,
-              24,
+              118,
+              1,
+              16,
+              34
+            ],
+            [
               5,
+              27,
+              1,
+              147,
+              4,
+              12
+            ],
+            [
+              13,
+              28,
+              39,
+              22,
+              73,
+              21
+            ],
+            [
+              11,
+              21,
+              20,
+              21,
+              10,
+              113
+            ]
+          ],
+          "ms_per_clip": 0.11896900020689162
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.22727272727272727,
+          "uar": 0.21875,
+          "macro_f1": 0.14219290236808926,
+          "per_class_f1": {
+            "neutral": 0.21052631578947367,
+            "happy": 0.0,
+            "sad": 0.0,
+            "angry": 0.3422459893048128,
+            "fear": 0.1951219512195122,
+            "disgust": 0.10526315789473684
+          },
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0,
+              13,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              29,
+              2,
+              1
+            ],
+            [
+              1,
+              2,
+              0,
+              24,
+              2,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              28,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              29,
+              1,
+              2
+            ]
+          ],
+          "ms_per_clip": 0.1258375969800082
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.5185185185185185,
+          "uar": 0.5219537915827821,
+          "macro_f1": 0.51396802329342,
+          "per_class_f1": {
+            "neutral": 0.628099173553719,
+            "happy": 0.40987654320987654,
+            "sad": 0.5488372093023256,
+            "angry": 0.5764895330112721,
+            "fear": 0.39896373056994816,
+            "disgust": 0.5215419501133787
+          },
+          "confusion_matrix": [
+            [
+              114,
+              8,
+              15,
+              19,
+              19,
+              8
+            ],
+            [
+              17,
+              83,
+              9,
+              70,
+              29,
+              20
+            ],
+            [
+              20,
+              10,
+              118,
+              25,
+              18,
+              37
+            ],
+            [
+              5,
+              27,
+              1,
+              179,
+              4,
+              12
+            ],
+            [
+              13,
+              28,
+              39,
+              50,
+              77,
+              21
+            ],
+            [
+              11,
+              21,
+              20,
+              50,
+              11,
+              115
+            ]
+          ],
+          "ms_per_clip": 0.11583214353992466
+        }
+      },
+      "n_params": 628615,
+      "train_seconds": 149.03173303604126
+    },
+    {
+      "model": "bilstm",
+      "kind": "deep",
+      "description": "2-layer BiLSTM + attention over mel frames",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.2109851787271142,
+          "uar": 0.210359892459978,
+          "macro_f1": 0.1793232180317401,
+          "per_class_f1": {
+            "neutral": 0.1657754010695187,
+            "happy": 0.05172413793103448,
+            "sad": 0.17941952506596306,
+            "angry": 0.3861003861003861,
+            "fear": 0.009900990099009901,
+            "disgust": 0.2830188679245283
+          },
+          "confusion_matrix": [
+            [
+              31,
+              0,
+              36,
+              0,
+              0,
+              100
+            ],
+            [
+              29,
+              6,
+              44,
+              6,
+              0,
+              111
+            ],
+            [
+              32,
+              0,
+              34,
+              0,
+              0,
+              130
+            ],
+            [
+              30,
+              23,
+              14,
+              50,
+              5,
+              74
+            ],
+            [
+              34,
+              6,
+              33,
+              5,
+              1,
+              117
+            ],
+            [
+              51,
+              1,
+              22,
+              2,
+              0,
+              120
+            ]
+          ],
+          "ms_per_clip": 0.12094723003889649
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.6022727272727273,
+          "uar": 0.59375,
+          "macro_f1": 0.5836049257759783,
+          "per_class_f1": {
+            "neutral": 0.42105263157894735,
+            "happy": 0.4375,
+            "sad": 0.4230769230769231,
+            "angry": 0.8333333333333334,
+            "fear": 0.6666666666666666,
+            "disgust": 0.72
+          },
+          "confusion_matrix": [
+            [
+              8,
+              3,
+              2,
+              0,
+              0,
+              3
+            ],
+            [
+              4,
+              14,
+              3,
+              0,
+              8,
+              3
+            ],
+            [
+              8,
+              5,
+              11,
+              1,
+              1,
+              6
+            ],
+            [
+              0,
+              3,
+              1,
+              25,
+              1,
+              2
+            ],
+            [
+              2,
+              5,
+              2,
+              0,
+              21,
+              2
+            ],
+            [
+              0,
+              2,
+              1,
+              2,
+              0,
+              27
+            ]
+          ],
+          "ms_per_clip": 0.12667477130889893
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.26303854875283444,
+          "uar": 0.2613963186655162,
+          "macro_f1": 0.2480093240475778,
+          "per_class_f1": {
+            "neutral": 0.18932038834951456,
+            "happy": 0.13513513513513514,
+            "sad": 0.2088167053364269,
+            "angry": 0.4702194357366771,
+            "fear": 0.1660377358490566,
+            "disgust": 0.31852654387865653
+          },
+          "confusion_matrix": [
+            [
+              39,
+              3,
+              38,
+              0,
+              0,
+              103
+            ],
+            [
+              33,
+              20,
+              47,
+              6,
+              8,
+              114
+            ],
+            [
+              40,
+              5,
+              45,
+              1,
+              1,
+              136
+            ],
+            [
+              30,
+              26,
+              15,
+              75,
+              6,
+              76
+            ],
+            [
+              36,
+              11,
+              35,
+              5,
+              22,
+              119
+            ],
+            [
+              51,
+              3,
+              23,
+              4,
+              0,
+              147
+            ]
+          ],
+          "ms_per_clip": 0.1136916024344308
+        }
+      },
+      "n_params": 628615,
+      "train_seconds": 23.352455377578735
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "description": "4-block 2D CNN on log-mel spectrogram",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.6294681778552746,
+          "uar": 0.6321082325145627,
+          "macro_f1": 0.6275719558649657,
+          "per_class_f1": {
+            "neutral": 0.6795580110497238,
+            "happy": 0.5504587155963303,
+            "sad": 0.6385224274406333,
+            "angry": 0.7320574162679426,
+            "fear": 0.5576923076923077,
+            "disgust": 0.6071428571428571
+          },
+          "confusion_matrix": [
+            [
+              123,
+              6,
+              13,
+              3,
+              19,
+              3
+            ],
+            [
+              13,
+              90,
+              6,
+              36,
+              36,
+              15
+            ],
+            [
+              22,
+              3,
+              121,
+              4,
+              19,
+              27
+            ],
+            [
+              5,
+              10,
+              3,
+              153,
+              10,
+              15
+            ],
+            [
+              12,
+              14,
+              27,
+              10,
+              116,
+              17
+            ],
+            [
+              20,
+              8,
+              13,
+              16,
+              20,
+              119
+            ]
+          ],
+          "ms_per_clip": 0.3242563349117688
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.7102272727272727,
+          "uar": 0.7135416666666666,
+          "macro_f1": 0.6886440345999169,
+          "per_class_f1": {
+            "neutral": 0.6486486486486487,
+            "happy": 0.4090909090909091,
+            "sad": 0.6666666666666666,
+            "angry": 0.7714285714285715,
+            "fear": 0.8235294117647058,
+            "disgust": 0.8125
+          },
+          "confusion_matrix": [
+            [
+              12,
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            [
+              4,
+              9,
+              3,
+              6,
+              6,
+              4
+            ],
+            [
+              3,
+              2,
+              23,
+              1,
+              1,
+              2
+            ],
+            [
+              2,
+              0,
+              3,
+              27,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              3,
+              0,
+              28,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              4,
+              1,
+              26
+            ]
+          ],
+          "ms_per_clip": 0.31629069284959277
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.6402116402116402,
+          "uar": 0.6434186559294411,
+          "macro_f1": 0.6369921245299929,
+          "per_class_f1": {
+            "neutral": 0.6766917293233082,
+            "happy": 0.5336927223719676,
+            "sad": 0.6428571428571429,
+            "angry": 0.7377049180327869,
+            "fear": 0.5950413223140496,
+            "disgust": 0.6359649122807017
+          },
+          "confusion_matrix": [
+            [
+              135,
+              6,
+              17,
+              3,
+              19,
+              3
+            ],
+            [
+              17,
+              99,
+              9,
+              42,
+              42,
+              19
+            ],
+            [
+              25,
+              5,
+              144,
+              5,
+              20,
+              29
+            ],
+            [
+              7,
+              10,
+              6,
+              180,
+              10,
+              15
+            ],
+            [
+              12,
+              15,
+              30,
+              10,
+              144,
+              17
+            ],
+            [
+              20,
+              8,
+              14,
+              20,
+              21,
+              145
+            ]
+          ],
+          "ms_per_clip": 0.32591333194654815
+        }
+      },
+      "n_params": 1174182,
+      "train_seconds": 457.5386748313904
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "description": "4-block 2D CNN on log-mel spectrogram",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.5841325196163906,
+          "uar": 0.5847896044645404,
+          "macro_f1": 0.5828169318349538,
+          "per_class_f1": {
+            "neutral": 0.6200607902735562,
+            "happy": 0.543859649122807,
+            "sad": 0.5448717948717948,
+            "angry": 0.7070217917675545,
+            "fear": 0.5073170731707317,
+            "disgust": 0.5737704918032787
+          },
+          "confusion_matrix": [
+            [
+              102,
+              12,
+              6,
+              4,
+              24,
+              19
+            ],
+            [
+              7,
+              93,
+              4,
+              34,
+              35,
+              23
+            ],
+            [
+              27,
+              2,
+              85,
+              3,
+              27,
+              52
+            ],
+            [
+              2,
+              10,
+              2,
+              146,
+              10,
+              26
+            ],
+            [
+              8,
+              21,
+              15,
+              16,
+              104,
+              32
+            ],
+            [
+              16,
+              8,
+              4,
+              14,
+              14,
+              140
+            ]
+          ],
+          "ms_per_clip": 0.3250630502609346
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.3409090909090909,
+          "uar": 0.3125,
+          "macro_f1": 0.22002923976608188,
+          "per_class_f1": {
+            "neutral": 0.0,
+            "happy": 0.0,
+            "sad": 0.0,
+            "angry": 0.40789473684210525,
+            "fear": 0.5789473684210527,
+            "disgust": 0.3333333333333333
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              16,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              25,
+              6,
+              1
+            ],
+            [
+              1,
+              0,
+              0,
+              18,
+              12,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              31,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              8,
+              22,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              22,
+              3,
+              7
+            ]
+          ],
+          "ms_per_clip": 0.3182034600864757
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.5517762660619804,
+          "uar": 0.5519605023487681,
+          "macro_f1": 0.5465942657418562,
+          "per_class_f1": {
+            "neutral": 0.5895953757225434,
+            "happy": 0.496,
+            "sad": 0.4941860465116279,
+            "angry": 0.6265486725663717,
+            "fear": 0.5185185185185185,
+            "disgust": 0.5547169811320755
+          },
+          "confusion_matrix": [
+            [
+              102,
+              12,
+              6,
+              20,
+              24,
+              19
+            ],
+            [
+              7,
+              93,
+              4,
+              59,
+              41,
+              24
+            ],
+            [
+              28,
+              2,
+              85,
+              21,
+              39,
+              53
+            ],
+            [
+              2,
+              10,
+              2,
+              177,
+              11,
+              26
+            ],
+            [
+              8,
+              22,
+              15,
+              24,
+              126,
+              33
+            ],
+            [
+              16,
+              8,
+              4,
+              36,
+              17,
+              147
+            ]
+          ],
+          "ms_per_clip": 0.3186492242330146
+        }
+      },
+      "n_params": 1174182,
+      "train_seconds": 281.2567472457886
+    },
+    {
+      "model": "cnn2d",
+      "kind": "deep",
+      "description": "4-block 2D CNN on log-mel spectrogram",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.22057541412380122,
+          "uar": 0.21646502912542262,
+          "macro_f1": 0.13930244081076992,
+          "per_class_f1": {
+            "neutral": 0.08780487804878048,
+            "happy": 0.11347517730496454,
+            "sad": 0.3595505617977528,
+            "angry": 0.08780487804878048,
+            "fear": 0.056338028169014086,
+            "disgust": 0.1308411214953271
+          },
+          "confusion_matrix": [
+            [
+              9,
+              0,
+              156,
+              0,
+              0,
+              2
+            ],
+            [
+              11,
+              16,
+              143,
+              0,
+              7,
+              19
+            ],
+            [
+              1,
+              1,
+              192,
+              0,
+              0,
+              2
+            ],
+            [
+              6,
+              53,
+              52,
+              9,
+              4,
+              72
+            ],
+            [
+              6,
+              8,
+              167,
+              0,
+              6,
+              9
+            ],
+            [
+              5,
+              8,
+              162,
+              0,
+              0,
+              21
+            ]
+          ],
+          "ms_per_clip": 0.3123906974493158
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.5625,
+          "uar": 0.5572916666666666,
+          "macro_f1": 0.5313302519998627,
+          "per_class_f1": {
+            "neutral": 0.5714285714285714,
+            "happy": 0.4931506849315068,
+            "sad": 0.5625,
+            "angry": 0.7368421052631579,
+            "fear": 0.17142857142857143,
+            "disgust": 0.6526315789473685
+          },
+          "confusion_matrix": [
+            [
+              8,
+              2,
+              5,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              18,
+              4,
+              3,
+              0,
+              7
+            ],
+            [
+              4,
+              3,
+              18,
+              0,
+              0,
+              7
+            ],
+            [
+              0,
+              3,
+              0,
+              21,
+              0,
+              8
+            ],
+            [
+              0,
+              15,
+              5,
+              0,
+              3,
+              9
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              0,
+              31
+            ]
+          ],
+          "ms_per_clip": 0.30794197862798517
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.2660619803476946,
+          "uar": 0.2603657367462372,
+          "macro_f1": 0.21001417604786207,
+          "per_class_f1": {
+            "neutral": 0.1459227467811159,
+            "happy": 0.19154929577464788,
+            "sad": 0.3710247349823322,
+            "angry": 0.22900763358778625,
+            "fear": 0.07258064516129033,
+            "disgust": 0.25
+          },
+          "confusion_matrix": [
+            [
+              17,
+              2,
+              161,
+              0,
+              0,
+              3
+            ],
+            [
+              11,
+              34,
+              147,
+              3,
+              7,
+              26
+            ],
+            [
+              5,
+              4,
+              210,
+              0,
+              0,
+              9
+            ],
+            [
+              6,
+              56,
+              52,
+              30,
+              4,
+              80
+            ],
+            [
+              6,
+              23,
+              172,
+              0,
+              9,
+              18
+            ],
+            [
+              5,
+              8,
+              162,
+              1,
+              0,
+              52
+            ]
+          ],
+          "ms_per_clip": 0.32399463004806417
+        }
+      },
+      "n_params": 1174182,
+      "train_seconds": 33.924952030181885
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "description": "CNN + BiLSTM hybrid (fixed version of the original)",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.6303400174367916,
+          "uar": 0.6325155810827324,
+          "macro_f1": 0.6296522999594433,
+          "per_class_f1": {
+            "neutral": 0.7079646017699115,
+            "happy": 0.5508021390374331,
+            "sad": 0.649746192893401,
+            "angry": 0.7216981132075472,
+            "fear": 0.5570291777188329,
+            "disgust": 0.5906735751295337
+          },
+          "confusion_matrix": [
+            [
+              120,
+              6,
+              12,
+              7,
+              17,
+              5
+            ],
+            [
+              14,
+              103,
+              7,
+              32,
+              24,
+              16
+            ],
+            [
+              17,
+              6,
+              128,
+              4,
+              18,
+              23
+            ],
+            [
+              0,
+              21,
+              2,
+              153,
+              9,
+              11
+            ],
+            [
+              8,
+              25,
+              29,
+              8,
+              105,
+              21
+            ],
+            [
+              13,
+              17,
+              20,
+              24,
+              8,
+              114
+            ]
+          ],
+          "ms_per_clip": 0.31920298349368853
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.7102272727272727,
+          "uar": 0.7291666666666666,
+          "macro_f1": 0.7066141115740677,
+          "per_class_f1": {
+            "neutral": 0.75,
+            "happy": 0.576271186440678,
+            "sad": 0.5660377358490566,
+            "angry": 0.8115942028985508,
+            "fear": 0.7222222222222222,
+            "disgust": 0.8135593220338984
+          },
+          "confusion_matrix": [
+            [
+              15,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              17,
+              1,
+              3,
+              9,
+              1
+            ],
+            [
+              7,
+              6,
+              15,
+              0,
+              2,
+              2
+            ],
+            [
+              0,
+              1,
+              0,
+              28,
+              3,
+              0
+            ],
+            [
+              1,
+              2,
+              3,
+              0,
+              26,
+              0
+            ],
+            [
+              0,
+              1,
+              1,
+              6,
+              0,
+              24
+            ]
+          ],
+          "ms_per_clip": 0.3124746409329501
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.6409674981103552,
+          "uar": 0.6441496500814878,
+          "macro_f1": 0.6407530284559443,
+          "per_class_f1": {
+            "neutral": 0.712401055408971,
+            "happy": 0.5542725173210161,
+            "sad": 0.639821029082774,
+            "angry": 0.7342799188640974,
+            "fear": 0.5835189309576837,
+            "disgust": 0.6202247191011236
+          },
+          "confusion_matrix": [
+            [
+              135,
+              6,
+              13,
+              7,
+              17,
+              5
+            ],
+            [
+              15,
+              120,
+              8,
+              35,
+              33,
+              17
+            ],
+            [
+              24,
+              12,
+              143,
+              4,
+              20,
+              25
+            ],
+            [
+              0,
+              22,
+              2,
+              181,
+              12,
+              11
+            ],
+            [
+              9,
+              27,
+              32,
+              8,
+              131,
+              21
+            ],
+            [
+              13,
+              18,
+              21,
+              30,
+              8,
+              138
+            ]
+          ],
+          "ms_per_clip": 0.31289762380171793
+        }
+      },
+      "n_params": 1341094,
+      "train_seconds": 442.5325379371643
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "description": "CNN + BiLSTM hybrid (fixed version of the original)",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.5928509154315605,
+          "uar": 0.5946219805287384,
+          "macro_f1": 0.5906899418885375,
+          "per_class_f1": {
+            "neutral": 0.6416184971098265,
+            "happy": 0.5294117647058824,
+            "sad": 0.6183574879227053,
+            "angry": 0.7036144578313253,
+            "fear": 0.5116279069767442,
+            "disgust": 0.5395095367847411
+          },
+          "confusion_matrix": [
+            [
+              111,
+              13,
+              15,
+              7,
               15,
               6
             ],
             [
+              13,
+              108,
+              10,
+              28,
+              21,
+              16
+            ],
+            [
+              24,
+              8,
+              128,
+              3,
+              9,
+              24
+            ],
+            [
+              4,
+              32,
+              2,
+              146,
+              6,
+              6
+            ],
+            [
+              10,
+              30,
+              40,
+              8,
+              88,
+              20
+            ],
+            [
+              17,
+              21,
+              23,
+              27,
+              9,
+              99
+            ]
+          ],
+          "ms_per_clip": 0.3242093579293129
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.35795454545454547,
+          "uar": 0.3333333333333333,
+          "macro_f1": 0.2566803773573864,
+          "per_class_f1": {
+            "neutral": 0.09523809523809523,
+            "happy": 0.1702127659574468,
+            "sad": 0.1111111111111111,
+            "angry": 0.43410852713178294,
+            "fear": 0.611764705882353,
+            "disgust": 0.11764705882352941
+          },
+          "confusion_matrix": [
+            [
+              1,
+              4,
+              0,
+              10,
+              1,
+              0
+            ],
+            [
+              0,
+              4,
+              0,
+              17,
+              11,
+              0
+            ],
+            [
+              4,
+              5,
+              2,
+              13,
+              8,
+              0
+            ],
+            [
+              0,
+              2,
+              1,
+              28,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              26,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              23,
+              6,
+              2
+            ]
+          ],
+          "ms_per_clip": 0.32014196569269354
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.562358276643991,
+          "uar": 0.5641716997411562,
+          "macro_f1": 0.5600358908742488,
+          "per_class_f1": {
+            "neutral": 0.6141304347826086,
+            "happy": 0.4933920704845815,
+            "sad": 0.5777777777777777,
+            "angry": 0.6397058823529411,
+            "fear": 0.5314685314685315,
+            "disgust": 0.5037406483790524
+          },
+          "confusion_matrix": [
+            [
+              113,
               16,
-              75,
+              15,
+              17,
+              16,
+              6
+            ],
+            [
+              13,
+              112,
+              10,
+              45,
+              32,
+              16
+            ],
+            [
+              28,
+              13,
+              130,
+              16,
+              17,
+              24
+            ],
+            [
+              4,
+              34,
+              3,
+              174,
+              7,
+              6
+            ],
+            [
+              10,
+              30,
+              40,
               14,
-              35,
-              33,
+              114,
+              20
+            ],
+            [
+              17,
+              21,
+              24,
+              50,
+              15,
+              101
+            ]
+          ],
+          "ms_per_clip": 0.3253184568674746
+        }
+      },
+      "n_params": 1341094,
+      "train_seconds": 243.70692253112793
+    },
+    {
+      "model": "cnn_lstm",
+      "kind": "deep",
+      "description": "CNN + BiLSTM hybrid (fixed version of the original)",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.27898866608544026,
+          "uar": 0.2874658845574158,
+          "macro_f1": 0.25550279722571456,
+          "per_class_f1": {
+            "neutral": 0.348993288590604,
+            "happy": 0.18,
+            "sad": 0.3279742765273312,
+            "angry": 0.3700787401574803,
+            "fear": 0.1411764705882353,
+            "disgust": 0.1647940074906367
+          },
+          "confusion_matrix": [
+            [
+              104,
+              0,
+              59,
+              0,
+              2,
+              2
+            ],
+            [
+              78,
+              27,
+              54,
+              4,
+              19,
+              14
+            ],
+            [
+              91,
+              1,
+              102,
+              0,
+              1,
+              1
+            ],
+            [
+              38,
+              53,
+              25,
+              47,
+              10,
               23
             ],
             [
-              32,
-              5,
-              113,
-              2,
-              7,
-              37
+              60,
+              14,
+              94,
+              1,
+              18,
+              9
             ],
             [
-              7,
-              26,
+              58,
+              9,
+              92,
+              6,
+              9,
+              22
+            ]
+          ],
+          "ms_per_clip": 0.31737524629574604
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.6931818181818182,
+          "uar": 0.6979166666666666,
+          "macro_f1": 0.6874205802211959,
+          "per_class_f1": {
+            "neutral": 0.6486486486486487,
+            "happy": 0.5862068965517241,
+            "sad": 0.6440677966101694,
+            "angry": 0.7088607594936709,
+            "fear": 0.7307692307692307,
+            "disgust": 0.8059701492537313
+          },
+          "confusion_matrix": [
+            [
+              12,
+              0,
               1,
-              140,
+              2,
+              0,
+              1
+            ],
+            [
+              3,
+              17,
+              2,
+              8,
+              1,
+              1
+            ],
+            [
               4,
-              18
+              2,
+              19,
+              3,
+              0,
+              4
+            ],
+            [
+              1,
+              2,
+              0,
+              28,
+              0,
+              1
+            ],
+            [
+              1,
+              5,
+              5,
+              1,
+              19,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0,
+              27
+            ]
+          ],
+          "ms_per_clip": 0.3059018741954457
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.3340891912320484,
+          "uar": 0.3439507238040456,
+          "macro_f1": 0.3254307465134842,
+          "per_class_f1": {
+            "neutral": 0.3665086887835703,
+            "happy": 0.24581005586592178,
+            "sad": 0.355359765051395,
+            "angry": 0.45045045045045046,
+            "fear": 0.24104234527687296,
+            "disgust": 0.2934131736526946
+          },
+          "confusion_matrix": [
+            [
+              116,
+              0,
+              60,
+              2,
+              2,
+              3
+            ],
+            [
+              81,
+              44,
+              56,
+              12,
+              20,
+              15
+            ],
+            [
+              95,
+              3,
+              121,
+              3,
+              1,
+              5
+            ],
+            [
+              39,
+              55,
+              25,
+              75,
+              10,
+              24
+            ],
+            [
+              61,
+              19,
+              99,
+              2,
+              37,
+              10
+            ],
+            [
+              58,
+              9,
+              92,
+              11,
+              9,
+              49
+            ]
+          ],
+          "ms_per_clip": 0.31222922281162896
+        }
+      },
+      "n_params": 1341094,
+      "train_seconds": 53.576069593429565
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "description": "CNN + BiGRU + attention pooling",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.6338273757628596,
+          "uar": 0.6365075970507964,
+          "macro_f1": 0.6327356198462463,
+          "per_class_f1": {
+            "neutral": 0.6927374301675978,
+            "happy": 0.5593667546174143,
+            "sad": 0.5780346820809249,
+            "angry": 0.7414634146341463,
+            "fear": 0.6004728132387707,
+            "disgust": 0.6243386243386243
+          },
+          "confusion_matrix": [
+            [
+              124,
+              9,
+              9,
+              5,
+              17,
+              3
+            ],
+            [
+              9,
+              106,
+              7,
+              30,
+              30,
+              14
+            ],
+            [
+              32,
+              4,
+              100,
+              2,
+              30,
+              28
+            ],
+            [
+              2,
+              24,
+              3,
+              152,
+              8,
+              7
+            ],
+            [
+              10,
+              20,
+              22,
+              5,
+              127,
+              12
             ],
             [
               14,
-              38,
-              47,
+              20,
+              9,
+              20,
+              15,
+              118
+            ]
+          ],
+          "ms_per_clip": 0.3026153278433975
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.7329545454545454,
+          "uar": 0.7291666666666666,
+          "macro_f1": 0.7264232295482297,
+          "per_class_f1": {
+            "neutral": 0.6666666666666666,
+            "happy": 0.7,
+            "sad": 0.6153846153846154,
+            "angry": 0.8285714285714286,
+            "fear": 0.78125,
+            "disgust": 0.7666666666666667
+          },
+          "confusion_matrix": [
+            [
               11,
-              69,
+              2,
+              1,
+              2,
+              0,
+              0
+            ],
+            [
+              2,
+              21,
+              1,
+              2,
+              5,
+              1
+            ],
+            [
+              4,
+              3,
+              20,
+              1,
+              1,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              29,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              5,
+              0,
+              25,
+              1
+            ],
+            [
+              0,
+              0,
+              4,
+              4,
+              1,
+              23
+            ]
+          ],
+          "ms_per_clip": 0.30834430998021906
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.6470143613000756,
+          "uar": 0.6499976032978622,
+          "macro_f1": 0.6458831086876939,
+          "per_class_f1": {
+            "neutral": 0.690537084398977,
+            "happy": 0.5785876993166287,
+            "sad": 0.583941605839416,
+            "angry": 0.7541666666666667,
+            "fear": 0.6242299794661191,
+            "disgust": 0.6438356164383562
+          },
+          "confusion_matrix": [
+            [
+              135,
+              11,
+              10,
+              7,
+              17,
+              3
+            ],
+            [
+              11,
+              127,
+              8,
+              32,
+              35,
+              15
+            ],
+            [
+              36,
+              7,
+              120,
+              3,
+              31,
+              31
+            ],
+            [
+              2,
+              25,
+              5,
+              181,
+              8,
+              7
+            ],
+            [
+              10,
+              21,
+              27,
+              5,
+              152,
+              13
+            ],
+            [
+              14,
+              20,
+              13,
+              24,
+              16,
+              141
+            ]
+          ],
+          "ms_per_clip": 0.31309116994983216
+        }
+      },
+      "n_params": 749223,
+      "train_seconds": 279.8073220252991
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "description": "CNN + BiGRU + attention pooling",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.6259808195292066,
+          "uar": 0.6272302334107296,
+          "macro_f1": 0.626411856878106,
+          "per_class_f1": {
+            "neutral": 0.7040498442367601,
+            "happy": 0.5534246575342465,
+            "sad": 0.6350710900473934,
+            "angry": 0.7159904534606205,
+            "fear": 0.5560975609756098,
+            "disgust": 0.5938375350140056
+          },
+          "confusion_matrix": [
+            [
+              113,
+              6,
+              15,
+              8,
+              20,
+              5
+            ],
+            [
+              9,
+              101,
+              13,
+              34,
+              29,
+              10
+            ],
+            [
+              14,
+              5,
+              134,
+              1,
+              21,
+              21
+            ],
+            [
+              1,
+              21,
+              2,
+              150,
+              14,
+              8
+            ],
+            [
+              7,
+              22,
+              38,
+              4,
+              114,
+              11
+            ],
+            [
+              10,
+              14,
+              24,
+              26,
+              16,
+              106
+            ]
+          ],
+          "ms_per_clip": 0.3094650291835316
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.3977272727272727,
+          "uar": 0.375,
+          "macro_f1": 0.30199995037299693,
+          "per_class_f1": {
+            "neutral": 0.21052631578947367,
+            "happy": 0.14634146341463414,
+            "sad": 0.11764705882352941,
+            "angry": 0.45528455284552843,
+            "fear": 0.6382978723404256,
+            "disgust": 0.24390243902439024
+          },
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0,
+              12,
+              1,
+              0
+            ],
+            [
+              0,
+              3,
+              0,
+              18,
+              10,
+              1
+            ],
+            [
+              1,
+              4,
+              2,
+              8,
+              14,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              28,
+              4,
+              0
+            ],
+            [
+              0,
+              1,
+              0,
+              1,
+              30,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              24,
+              3,
+              5
+            ]
+          ],
+          "ms_per_clip": 0.30949576334519824
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.5956160241874527,
+          "uar": 0.5966949477518935,
+          "macro_f1": 0.5952201952765503,
+          "per_class_f1": {
+            "neutral": 0.6764705882352942,
+            "happy": 0.5123152709359606,
+            "sad": 0.5964912280701754,
+            "angry": 0.6568265682656826,
+            "fear": 0.5714285714285714,
+            "disgust": 0.5577889447236181
+          },
+          "confusion_matrix": [
+            [
+              115,
+              7,
+              15,
+              20,
+              21,
+              5
+            ],
+            [
+              9,
+              104,
+              13,
+              52,
+              39,
+              11
+            ],
+            [
+              15,
+              9,
+              136,
+              9,
+              35,
+              24
+            ],
+            [
+              1,
+              21,
+              2,
+              178,
+              18,
+              8
+            ],
+            [
+              7,
+              23,
+              38,
+              5,
+              144,
+              11
+            ],
+            [
+              10,
+              14,
+              24,
+              50,
+              19,
+              111
+            ]
+          ],
+          "ms_per_clip": 0.3125709020451714
+        }
+      },
+      "n_params": 749223,
+      "train_seconds": 308.51470708847046
+    },
+    {
+      "model": "crnn_attention",
+      "kind": "deep",
+      "description": "CNN + BiGRU + attention pooling",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.2781168265039233,
+          "uar": 0.28085665403886106,
+          "macro_f1": 0.2388304023924084,
+          "per_class_f1": {
+            "neutral": 0.3044496487119438,
+            "happy": 0.11636363636363636,
+            "sad": 0.40258064516129033,
+            "angry": 0.23008849557522124,
+            "fear": 0.17880794701986755,
+            "disgust": 0.20069204152249134
+          },
+          "confusion_matrix": [
+            [
+              65,
+              0,
+              97,
+              0,
+              3,
+              2
+            ],
+            [
+              60,
+              16,
+              70,
+              4,
+              32,
+              14
+            ],
+            [
+              36,
+              0,
+              156,
+              0,
+              2,
+              2
+            ],
+            [
+              29,
+              49,
+              29,
+              26,
+              21,
+              42
+            ],
+            [
+              28,
+              9,
+              128,
+              0,
+              27,
+              4
+            ],
+            [
+              42,
+              5,
+              99,
+              0,
+              21,
+              29
+            ]
+          ],
+          "ms_per_clip": 0.3015726882681809
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.6647727272727273,
+          "uar": 0.6770833333333334,
+          "macro_f1": 0.6480770271047585,
+          "per_class_f1": {
+            "neutral": 0.6341463414634146,
+            "happy": 0.44,
+            "sad": 0.5714285714285714,
+            "angry": 0.7397260273972602,
+            "fear": 0.6538461538461539,
+            "disgust": 0.8493150684931506
+          },
+          "confusion_matrix": [
+            [
+              13,
+              2,
+              1,
+              0,
+              0,
+              0
+            ],
+            [
+              5,
+              11,
+              3,
+              8,
+              3,
+              2
+            ],
+            [
+              5,
+              0,
+              18,
+              4,
+              0,
+              5
+            ],
+            [
+              1,
+              2,
+              0,
+              27,
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              8,
+              2,
+              17,
+              1
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              31
+            ]
+          ],
+          "ms_per_clip": 0.30550360679626465
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.3295540438397581,
+          "uar": 0.3327341577988687,
+          "macro_f1": 0.30822599599836914,
+          "per_class_f1": {
+            "neutral": 0.3333333333333333,
+            "happy": 0.16615384615384615,
+            "sad": 0.4152744630071599,
+            "angry": 0.35451505016722407,
+            "fear": 0.24858757062146894,
+            "disgust": 0.3314917127071823
+          },
+          "confusion_matrix": [
+            [
+              78,
+              2,
+              98,
+              0,
+              3,
+              2
+            ],
+            [
+              65,
+              27,
+              73,
+              12,
+              35,
+              16
+            ],
+            [
+              41,
+              0,
+              174,
+              4,
+              2,
+              7
+            ],
+            [
+              30,
+              51,
+              29,
+              53,
+              21,
+              44
+            ],
+            [
+              29,
+              12,
+              136,
+              2,
+              44,
+              5
+            ],
+            [
+              42,
+              5,
+              100,
+              0,
+              21,
+              60
+            ]
+          ],
+          "ms_per_clip": 0.3147968629590508
+        }
+      },
+      "n_params": 749223,
+      "train_seconds": 44.95385026931763
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "description": "Fine-tuned HuBERT-base",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.7401918047079338,
+          "uar": 0.7423163876328974,
+          "macro_f1": 0.7408815033402508,
+          "per_class_f1": {
+            "neutral": 0.8165680473372781,
+            "happy": 0.7349397590361446,
+            "sad": 0.6982543640897756,
+            "angry": 0.8137931034482758,
+            "fear": 0.6764705882352942,
+            "disgust": 0.7052631578947368
+          },
+          "confusion_matrix": [
+            [
+              138,
+              2,
+              15,
+              5,
+              7,
+              0
+            ],
+            [
+              10,
+              122,
+              6,
+              26,
+              23,
+              9
+            ],
+            [
+              11,
+              0,
+              140,
+              2,
+              24,
+              19
+            ],
+            [
+              2,
+              3,
+              1,
+              177,
+              5,
+              8
+            ],
+            [
+              6,
+              7,
+              25,
+              6,
+              138,
+              14
+            ],
+            [
+              4,
+              2,
+              18,
+              23,
+              15,
+              134
+            ]
+          ],
+          "ms_per_clip": 5.50355969456454
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.7613636363636364,
+          "uar": 0.7604166666666666,
+          "macro_f1": 0.7528035581769643,
+          "per_class_f1": {
+            "neutral": 0.6857142857142857,
+            "happy": 0.6666666666666666,
+            "sad": 0.7213114754098361,
+            "angry": 0.7901234567901234,
+            "fear": 0.819672131147541,
+            "disgust": 0.8333333333333334
+          },
+          "confusion_matrix": [
+            [
+              12,
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              18,
+              0,
+              9,
+              3,
+              1
+            ],
+            [
+              6,
+              2,
+              22,
+              0,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              3,
+              1,
+              25,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              7,
+              0,
+              25
+            ]
+          ],
+          "ms_per_clip": 5.538260394876653
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.7430083144368859,
+          "uar": 0.7455301505128942,
+          "macro_f1": 0.7431462645842176,
+          "per_class_f1": {
+            "neutral": 0.8042895442359249,
+            "happy": 0.7253886010362695,
+            "sad": 0.7012987012987013,
+            "angry": 0.810077519379845,
+            "fear": 0.6950959488272921,
+            "disgust": 0.7227272727272728
+          },
+          "confusion_matrix": [
+            [
+              150,
+              2,
+              19,
+              5,
+              7,
+              0
+            ],
+            [
+              11,
+              140,
+              6,
+              35,
+              26,
+              10
+            ],
+            [
+              17,
+              2,
+              162,
+              2,
+              25,
+              20
+            ],
+            [
+              2,
+              3,
+              1,
+              209,
+              5,
+              8
+            ],
+            [
+              6,
+              9,
+              28,
+              7,
+              163,
+              15
+            ],
+            [
+              4,
+              2,
+              18,
+              30,
+              15,
+              159
+            ]
+          ],
+          "ms_per_clip": 5.527226022041304
+        }
+      },
+      "n_params": 94570131,
+      "train_seconds": 1624.3042390346527
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "description": "Fine-tuned HuBERT-base",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.7279860505666957,
+          "uar": 0.7295256425923662,
+          "macro_f1": 0.7284846620548963,
+          "per_class_f1": {
+            "neutral": 0.8,
+            "happy": 0.696165191740413,
+            "sad": 0.7128205128205128,
+            "angry": 0.7889908256880734,
+            "fear": 0.6761229314420804,
+            "disgust": 0.6968085106382979
+          },
+          "confusion_matrix": [
+            [
+              132,
+              3,
+              15,
+              4,
+              12,
+              1
+            ],
+            [
+              10,
+              118,
+              4,
+              27,
+              30,
+              7
+            ],
+            [
+              10,
+              0,
+              139,
+              4,
+              24,
+              19
+            ],
+            [
+              1,
+              5,
+              1,
+              172,
+              6,
+              11
+            ],
+            [
+              8,
+              11,
+              15,
+              8,
+              143,
+              11
+            ],
+            [
+              2,
+              6,
+              20,
+              25,
+              12,
+              131
+            ]
+          ],
+          "ms_per_clip": 5.558881327289026
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.6875,
+          "uar": 0.703125,
+          "macro_f1": 0.679368985876143,
+          "per_class_f1": {
+            "neutral": 0.8235294117647058,
+            "happy": 0.3902439024390244,
+            "sad": 0.7142857142857143,
+            "angry": 0.6808510638297872,
+            "fear": 0.7887323943661971,
+            "disgust": 0.6785714285714286
+          },
+          "confusion_matrix": [
+            [
+              14,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              8,
+              1,
+              15,
+              3,
+              4
+            ],
+            [
+              3,
+              1,
+              20,
+              2,
+              5,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              3,
+              28,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              10,
+              3,
+              19
+            ]
+          ],
+          "ms_per_clip": 5.525018681179394
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.7226001511715797,
+          "uar": 0.7250742977662736,
+          "macro_f1": 0.7224872731244053,
+          "per_class_f1": {
+            "neutral": 0.8021978021978022,
+            "happy": 0.6631578947368421,
+            "sad": 0.7130044843049327,
+            "angry": 0.769811320754717,
+            "fear": 0.6923076923076923,
+            "disgust": 0.6944444444444444
+          },
+          "confusion_matrix": [
+            [
+              146,
+              3,
+              17,
+              4,
+              12,
+              1
+            ],
+            [
+              11,
+              126,
+              5,
+              42,
+              33,
+              11
+            ],
+            [
+              13,
+              1,
+              159,
+              6,
+              29,
+              20
+            ],
+            [
+              1,
+              5,
+              1,
+              204,
+              6,
+              11
+            ],
+            [
+              8,
+              11,
+              16,
+              11,
+              171,
+              11
+            ],
+            [
+              2,
+              6,
+              20,
+              35,
+              15,
+              150
+            ]
+          ],
+          "ms_per_clip": 5.596072945915562
+        }
+      },
+      "n_params": 94570131,
+      "train_seconds": 1432.4977507591248
+    },
+    {
+      "model": "hubert",
+      "kind": "ssl",
+      "description": "Fine-tuned HuBERT-base",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.4176111595466434,
+          "uar": 0.4095278830094913,
+          "macro_f1": 0.37360960844581137,
+          "per_class_f1": {
+            "neutral": 0.16393442622950818,
+            "happy": 0.4558139534883721,
+            "sad": 0.5226130653266332,
+            "angry": 0.325,
+            "fear": 0.3953488372093023,
+            "disgust": 0.37894736842105264
+          },
+          "confusion_matrix": [
+            [
+              15,
+              31,
+              98,
+              0,
+              21,
+              2
+            ],
+            [
+              0,
+              147,
+              22,
+              1,
+              18,
+              8
+            ],
+            [
+              0,
+              18,
+              156,
+              0,
+              14,
+              8
+            ],
+            [
+              0,
+              140,
+              1,
+              39,
+              7,
+              9
+            ],
+            [
+              0,
+              60,
+              59,
+              1,
+              68,
+              8
+            ],
+            [
+              1,
+              53,
+              65,
+              3,
+              20,
+              54
+            ]
+          ],
+          "ms_per_clip": 5.5693046050998785
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.8011363636363636,
+          "uar": 0.796875,
+          "macro_f1": 0.7960475693304256,
+          "per_class_f1": {
+            "neutral": 0.75,
+            "happy": 0.8135593220338984,
+            "sad": 0.7272727272727273,
+            "angry": 0.8533333333333334,
+            "fear": 0.7796610169491526,
+            "disgust": 0.8524590163934426
+          },
+          "confusion_matrix": [
+            [
+              12,
+              0,
+              4,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              24,
+              3,
+              3,
+              1,
+              0
+            ],
+            [
+              3,
+              0,
+              24,
+              0,
+              3,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              3,
+              3,
+              2,
+              23,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              6,
+              0,
+              26
+            ]
+          ],
+          "ms_per_clip": 5.610287189483643
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.46863189720332576,
+          "uar": 0.45806969609816894,
+          "macro_f1": 0.44079649504444873,
+          "per_class_f1": {
+            "neutral": 0.25116279069767444,
+            "happy": 0.48579545454545453,
+            "sad": 0.5429864253393665,
+            "angry": 0.4507936507936508,
+            "fear": 0.45161290322580644,
+            "disgust": 0.4624277456647399
+          },
+          "confusion_matrix": [
+            [
+              27,
+              31,
+              102,
+              0,
+              21,
+              2
+            ],
+            [
+              1,
+              171,
+              25,
+              4,
+              19,
+              8
+            ],
+            [
+              3,
+              18,
+              180,
+              0,
+              17,
+              10
+            ],
+            [
+              0,
+              140,
+              1,
+              71,
+              7,
+              9
+            ],
+            [
+              0,
+              63,
+              62,
+              3,
+              91,
+              9
+            ],
+            [
+              1,
+              53,
+              65,
+              9,
+              20,
+              80
+            ]
+          ],
+          "ms_per_clip": 5.584213108342431
+        }
+      },
+      "n_params": 94570131,
+      "train_seconds": 199.35181498527527
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "description": "Random Forest on the same statistics",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.47515257192676547,
+          "uar": 0.4767251211861991,
+          "macro_f1": 0.4583506439154061,
+          "per_class_f1": {
+            "neutral": 0.46875,
+            "happy": 0.42597402597402595,
+            "sad": 0.5462555066079295,
+            "angry": 0.6589327146171694,
+            "fear": 0.23776223776223776,
+            "disgust": 0.4124293785310734
+          },
+          "confusion_matrix": [
+            [
+              90,
+              16,
+              20,
+              4,
+              18,
+              19
+            ],
+            [
+              31,
+              82,
+              14,
+              41,
+              11,
               17
             ],
             [
-              16,
-              24,
-              25,
+              33,
+              8,
+              124,
+              3,
+              12,
+              16
+            ],
+            [
+              2,
+              27,
+              2,
+              142,
+              9,
+              14
+            ],
+            [
+              26,
+              34,
+              61,
+              22,
+              34,
+              19
+            ],
+            [
+              35,
+              22,
+              37,
               23,
-              11,
-              97
+              6,
+              73
             ]
           ],
-          "ms_per_clip": 5.138392851679035
+          "ms_per_clip": 0.1667161141672442
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.42045454545454547,
+          "uar": 0.390625,
+          "macro_f1": 0.36913800137569625,
+          "per_class_f1": {
+            "neutral": 0.10526315789473684,
+            "happy": 0.3137254901960784,
+            "sad": 0.2857142857142857,
+            "angry": 0.43478260869565216,
+            "fear": 0.5,
+            "disgust": 0.5753424657534246
+          },
+          "confusion_matrix": [
+            [
+              1,
+              4,
+              4,
+              4,
+              1,
+              2
+            ],
+            [
+              0,
+              8,
+              0,
+              13,
+              5,
+              6
+            ],
+            [
+              2,
+              4,
+              6,
+              15,
+              0,
+              5
+            ],
+            [
+              0,
+              1,
+              0,
+              25,
+              1,
+              5
+            ],
+            [
+              0,
+              2,
+              0,
+              15,
+              13,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              11,
+              0,
+              21
+            ]
+          ],
+          "ms_per_clip": 0.9265176274559714
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.46787603930461075,
+          "uar": 0.468842872207842,
+          "macro_f1": 0.45312660655874454,
+          "per_class_f1": {
+            "neutral": 0.45161290322580644,
+            "happy": 0.41284403669724773,
+            "sad": 0.5241935483870968,
+            "angry": 0.6117216117216118,
+            "fear": 0.2781065088757396,
+            "disgust": 0.44028103044496486
+          },
+          "confusion_matrix": [
+            [
+              91,
+              20,
+              24,
+              8,
+              19,
+              21
+            ],
+            [
+              31,
+              90,
+              14,
+              54,
+              16,
+              23
+            ],
+            [
+              35,
+              12,
+              130,
+              18,
+              12,
+              21
+            ],
+            [
+              2,
+              28,
+              2,
+              167,
+              10,
+              19
+            ],
+            [
+              26,
+              36,
+              61,
+              37,
+              47,
+              21
+            ],
+            [
+              35,
+              22,
+              37,
+              34,
+              6,
+              94
+            ]
+          ],
+          "ms_per_clip": 0.15190110815715718
         }
       },
-      "n_params": 628615,
-      "train_seconds": 2942.4992632865906
+      "n_params": null,
+      "train_seconds": 21.951868295669556
     },
     {
       "model": "random_forest",
@@ -129,72 +4348,612 @@
       "test": {
         "cremad": {
           "n": 1147,
-          "accuracy": 0.4768962510897995,
-          "uar": 0.47916412073811565,
-          "macro_f1": 0.45651659340039813,
+          "accuracy": 0.4734088927637315,
+          "uar": 0.47487677705812875,
+          "macro_f1": 0.4543514964121173,
           "per_class_f1": {
-            "neutral": 0.46568627450980393,
-            "happy": 0.4166666666666667,
-            "sad": 0.5631929046563193,
-            "angry": 0.6606334841628959,
-            "fear": 0.23529411764705882,
-            "disgust": 0.39762611275964393
+            "neutral": 0.4746666666666667,
+            "happy": 0.4175257731958763,
+            "sad": 0.5490196078431373,
+            "angry": 0.6515837104072398,
+            "fear": 0.23104693140794225,
+            "disgust": 0.40226628895184136
           },
           "confusion_matrix": [
             [
-              95,
+              89,
               16,
-              16,
+              21,
               4,
               16,
-              20
+              21
             ],
             [
-              39,
-              80,
-              12,
+              29,
+              81,
+              16,
               44,
-              9,
-              12
-            ],
-            [
-              37,
-              5,
-              127,
-              4,
-              8,
+              11,
               15
             ],
             [
-              3,
-              26,
-              2,
-              146,
-              8,
-              11
+              32,
+              6,
+              126,
+              5,
+              7,
+              20
             ],
             [
-              27,
-              35,
-              62,
+              2,
+              30,
+              2,
+              144,
+              8,
+              10
+            ],
+            [
+              24,
+              33,
+              63,
               24,
               32,
-              16
+              20
             ],
             [
-              40,
+              32,
               26,
-              36,
-              24,
-              3,
-              67
+              35,
+              25,
+              7,
+              71
             ]
           ],
-          "ms_per_clip": 0.12035378187557044
+          "ms_per_clip": 0.15953154593004593
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.2215909090909091,
+          "uar": 0.203125,
+          "macro_f1": 0.11082325849165227,
+          "per_class_f1": {
+            "neutral": 0.0,
+            "happy": 0.0,
+            "sad": 0.0,
+            "angry": 0.3316062176165803,
+            "fear": 0.3333333333333333,
+            "disgust": 0.0
+          },
+          "confusion_matrix": [
+            [
+              0,
+              3,
+              0,
+              13,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              29,
+              3,
+              0
+            ],
+            [
+              0,
+              2,
+              0,
+              30,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              25,
+              7,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ]
+          ],
+          "ms_per_clip": 0.8299283005974509
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.4399092970521542,
+          "uar": 0.4414365832614322,
+          "macro_f1": 0.4195556184369191,
+          "per_class_f1": {
+            "neutral": 0.45524296675191817,
+            "happy": 0.3811764705882353,
+            "sad": 0.5132382892057027,
+            "angry": 0.5543307086614173,
+            "fear": 0.2445141065830721,
+            "disgust": 0.36883116883116884
+          },
+          "confusion_matrix": [
+            [
+              89,
+              19,
+              21,
+              17,
+              16,
+              21
+            ],
+            [
+              29,
+              81,
+              16,
+              73,
+              14,
+              15
+            ],
+            [
+              32,
+              8,
+              126,
+              35,
+              7,
+              20
+            ],
+            [
+              2,
+              30,
+              2,
+              176,
+              8,
+              10
+            ],
+            [
+              24,
+              33,
+              63,
+              49,
+              39,
+              20
+            ],
+            [
+              32,
+              26,
+              35,
+              57,
+              7,
+              71
+            ]
+          ],
+          "ms_per_clip": 0.14335714500236946
         }
       },
       "n_params": null,
-      "train_seconds": 15.304343700408936
+      "train_seconds": 18.331725597381592
+    },
+    {
+      "model": "random_forest",
+      "kind": "classical",
+      "description": "Random Forest on the same statistics",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.22057541412380122,
+          "uar": 0.21513605442176867,
+          "macro_f1": 0.12966119719215696,
+          "per_class_f1": {
+            "neutral": 0.0,
+            "happy": 0.07017543859649122,
+            "sad": 0.3534798534798535,
+            "angry": 0.10576923076923077,
+            "fear": 0.17647058823529413,
+            "disgust": 0.07207207207207207
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              164,
+              0,
+              0,
+              3
+            ],
+            [
+              1,
+              8,
+              143,
+              0,
+              40,
+              4
+            ],
+            [
+              1,
+              0,
+              193,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              19,
+              66,
+              11,
+              89,
+              11
+            ],
+            [
+              1,
+              3,
+              158,
+              1,
+              33,
+              0
+            ],
+            [
+              0,
+              2,
+              172,
+              0,
+              14,
+              8
+            ]
+          ],
+          "ms_per_clip": 0.15038163535160506
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.5113636363636364,
+          "uar": 0.4791666666666667,
+          "macro_f1": 0.4742052946085398,
+          "per_class_f1": {
+            "neutral": 0.21052631578947367,
+            "happy": 0.4528301886792453,
+            "sad": 0.509090909090909,
+            "angry": 0.47761194029850745,
+            "fear": 0.6551724137931034,
+            "disgust": 0.54
+          },
+          "confusion_matrix": [
+            [
+              2,
+              4,
+              5,
+              0,
+              0,
+              5
+            ],
+            [
+              0,
+              12,
+              2,
+              4,
+              4,
+              10
+            ],
+            [
+              1,
+              3,
+              14,
+              3,
+              1,
+              10
+            ],
+            [
+              0,
+              1,
+              1,
+              16,
+              1,
+              13
+            ],
+            [
+              0,
+              0,
+              1,
+              9,
+              19,
+              3
+            ],
+            [
+              0,
+              1,
+              0,
+              3,
+              1,
+              27
+            ]
+          ],
+          "ms_per_clip": 0.8554174141450362
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.25925925925925924,
+          "uar": 0.25109049947272555,
+          "macro_f1": 0.19649167396877687,
+          "per_class_f1": {
+            "neutral": 0.021164021164021163,
+            "happy": 0.1423487544483986,
+            "sad": 0.36094158674803833,
+            "angry": 0.19636363636363635,
+            "fear": 0.24074074074074073,
+            "disgust": 0.21739130434782608
+          },
+          "confusion_matrix": [
+            [
+              2,
+              4,
+              169,
+              0,
+              0,
+              8
+            ],
+            [
+              1,
+              20,
+              145,
+              4,
+              44,
+              14
+            ],
+            [
+              2,
+              3,
+              207,
+              3,
+              3,
+              10
+            ],
+            [
+              0,
+              20,
+              67,
+              27,
+              90,
+              24
+            ],
+            [
+              1,
+              3,
+              159,
+              10,
+              52,
+              3
+            ],
+            [
+              0,
+              3,
+              172,
+              3,
+              15,
+              35
+            ]
+          ],
+          "ms_per_clip": 0.13716492973667874
+        }
+      },
+      "n_params": null,
+      "train_seconds": 2.2617599964141846
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "description": "RBF SVM on MFCC/chroma/spectral statistics",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.4873583260680035,
+          "uar": 0.4871532445313454,
+          "macro_f1": 0.486377993644694,
+          "per_class_f1": {
+            "neutral": 0.5015673981191222,
+            "happy": 0.40404040404040403,
+            "sad": 0.5588235294117647,
+            "angry": 0.6039603960396039,
+            "fear": 0.41688654353562005,
+            "disgust": 0.4329896907216495
+          },
+          "confusion_matrix": [
+            [
+              80,
+              17,
+              23,
+              5,
+              23,
+              19
+            ],
+            [
+              15,
+              80,
+              8,
+              44,
+              29,
+              20
+            ],
+            [
+              22,
+              5,
+              114,
+              4,
+              24,
+              27
+            ],
+            [
+              1,
+              30,
+              1,
+              122,
+              15,
+              27
+            ],
+            [
+              12,
+              38,
+              40,
+              12,
+              79,
+              15
+            ],
+            [
+              22,
+              30,
+              26,
+              21,
+              13,
+              84
+            ]
+          ],
+          "ms_per_clip": 1.6909541518353544
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.4602272727272727,
+          "uar": 0.421875,
+          "macro_f1": 0.39425310717861645,
+          "per_class_f1": {
+            "neutral": 0.0,
+            "happy": 0.36,
+            "sad": 0.40625,
+            "angry": 0.49230769230769234,
+            "fear": 0.5806451612903226,
+            "disgust": 0.5263157894736842
+          },
+          "confusion_matrix": [
+            [
+              0,
+              3,
+              8,
+              3,
+              0,
+              2
+            ],
+            [
+              0,
+              9,
+              6,
+              6,
+              6,
+              5
+            ],
+            [
+              0,
+              1,
+              13,
+              2,
+              3,
+              13
+            ],
+            [
+              0,
+              1,
+              0,
+              16,
+              2,
+              13
+            ],
+            [
+              0,
+              4,
+              4,
+              1,
+              18,
+              5
+            ],
+            [
+              0,
+              0,
+              1,
+              5,
+              1,
+              25
+            ]
+          ],
+          "ms_per_clip": 1.6557831655849111
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.4837490551776266,
+          "uar": 0.4822164701370913,
+          "macro_f1": 0.48243197766716367,
+          "per_class_f1": {
+            "neutral": 0.47761194029850745,
+            "happy": 0.3991031390134529,
+            "sad": 0.538135593220339,
+            "angry": 0.5884861407249466,
+            "fear": 0.4399092970521542,
+            "disgust": 0.45134575569358176
+          },
+          "confusion_matrix": [
+            [
+              80,
+              20,
+              31,
+              8,
+              23,
+              21
+            ],
+            [
+              15,
+              89,
+              14,
+              50,
+              35,
+              25
+            ],
+            [
+              22,
+              6,
+              127,
+              6,
+              27,
+              40
+            ],
+            [
+              1,
+              31,
+              1,
+              138,
+              17,
+              40
+            ],
+            [
+              12,
+              42,
+              44,
+              13,
+              97,
+              20
+            ],
+            [
+              22,
+              30,
+              27,
+              26,
+              14,
+              109
+            ]
+          ],
+          "ms_per_clip": 1.6320065305887168
+        }
+      },
+      "n_params": null,
+      "train_seconds": 8.582000732421875
     },
     {
       "model": "svm",
@@ -265,11 +5024,1576 @@
               81
             ]
           ],
-          "ms_per_clip": 0.9972870401849723
+          "ms_per_clip": 1.4493024754545016
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.26704545454545453,
+          "uar": 0.2552083333333333,
+          "macro_f1": 0.20812095903068403,
+          "per_class_f1": {
+            "neutral": 0.21052631578947367,
+            "happy": 0.0,
+            "sad": 0.0,
+            "angry": 0.33121019108280253,
+            "fear": 0.4166666666666667,
+            "disgust": 0.2903225806451613
+          },
+          "confusion_matrix": [
+            [
+              2,
+              1,
+              0,
+              13,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              25,
+              4,
+              3
+            ],
+            [
+              1,
+              1,
+              0,
+              23,
+              0,
+              7
+            ],
+            [
+              0,
+              0,
+              0,
+              26,
+              2,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              15,
+              10,
+              7
+            ],
+            [
+              0,
+              0,
+              0,
+              23,
+              0,
+              9
+            ]
+          ],
+          "ms_per_clip": 1.4498884027654473
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.46787603930461075,
+          "uar": 0.46722509826478764,
+          "macro_f1": 0.4643480584678988,
+          "per_class_f1": {
+            "neutral": 0.48955223880597015,
+            "happy": 0.41330166270783847,
+            "sad": 0.5069124423963134,
+            "angry": 0.5448275862068965,
+            "fear": 0.42790697674418604,
+            "disgust": 0.40358744394618834
+          },
+          "confusion_matrix": [
+            [
+              82,
+              17,
+              24,
+              21,
+              22,
+              17
+            ],
+            [
+              14,
+              87,
+              7,
+              68,
+              29,
+              23
+            ],
+            [
+              20,
+              8,
+              110,
+              28,
+              27,
+              35
+            ],
+            [
+              1,
+              21,
+              1,
+              158,
+              18,
+              29
+            ],
+            [
+              12,
+              30,
+              41,
+              29,
+              92,
+              24
+            ],
+            [
+              23,
+              30,
+              23,
+              48,
+              14,
+              90
+            ]
+          ],
+          "ms_per_clip": 1.433729134269132
         }
       },
       "n_params": null,
-      "train_seconds": 5.845020771026611
+      "train_seconds": 6.447000980377197
+    },
+    {
+      "model": "svm",
+      "kind": "classical",
+      "description": "RBF SVM on MFCC/chroma/spectral statistics",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.22406277244986922,
+          "uar": 0.22030938123752497,
+          "macro_f1": 0.15708878736585394,
+          "per_class_f1": {
+            "neutral": 0.10810810810810811,
+            "happy": 0.10236220472440945,
+            "sad": 0.35363457760314343,
+            "angry": 0.16666666666666666,
+            "fear": 0.14754098360655737,
+            "disgust": 0.06422018348623854
+          },
+          "confusion_matrix": [
+            [
+              12,
+              7,
+              141,
+              0,
+              6,
+              1
+            ],
+            [
+              19,
+              13,
+              123,
+              2,
+              36,
+              3
+            ],
+            [
+              5,
+              2,
+              180,
+              0,
+              9,
+              0
+            ],
+            [
+              6,
+              19,
+              61,
+              18,
+              83,
+              9
+            ],
+            [
+              6,
+              8,
+              153,
+              0,
+              27,
+              2
+            ],
+            [
+              7,
+              9,
+              164,
+              0,
+              9,
+              7
+            ]
+          ],
+          "ms_per_clip": 0.2091292619913063
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.4715909090909091,
+          "uar": 0.4375,
+          "macro_f1": 0.4244634051682086,
+          "per_class_f1": {
+            "neutral": 0.1,
+            "happy": 0.39215686274509803,
+            "sad": 0.4722222222222222,
+            "angry": 0.5423728813559322,
+            "fear": 0.5205479452054794,
+            "disgust": 0.5194805194805194
+          },
+          "confusion_matrix": [
+            [
+              1,
+              3,
+              7,
+              0,
+              0,
+              5
+            ],
+            [
+              1,
+              10,
+              4,
+              6,
+              6,
+              5
+            ],
+            [
+              2,
+              1,
+              17,
+              1,
+              6,
+              5
+            ],
+            [
+              0,
+              1,
+              4,
+              16,
+              3,
+              8
+            ],
+            [
+              0,
+              3,
+              6,
+              2,
+              19,
+              2
+            ],
+            [
+              0,
+              1,
+              2,
+              2,
+              7,
+              20
+            ]
+          ],
+          "ms_per_clip": 0.2155683257363059
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.25699168556311414,
+          "uar": 0.2508747962803183,
+          "macro_f1": 0.2099360585793935,
+          "per_class_f1": {
+            "neutral": 0.10743801652892562,
+            "happy": 0.15081967213114755,
+            "sad": 0.3614678899082569,
+            "angry": 0.24727272727272728,
+            "fear": 0.20956719817767655,
+            "disgust": 0.18305084745762712
+          },
+          "confusion_matrix": [
+            [
+              13,
+              10,
+              148,
+              0,
+              6,
+              6
+            ],
+            [
+              20,
+              23,
+              127,
+              8,
+              42,
+              8
+            ],
+            [
+              7,
+              3,
+              197,
+              1,
+              15,
+              5
+            ],
+            [
+              6,
+              20,
+              65,
+              34,
+              86,
+              17
+            ],
+            [
+              6,
+              11,
+              159,
+              2,
+              46,
+              4
+            ],
+            [
+              7,
+              10,
+              166,
+              2,
+              16,
+              27
+            ]
+          ],
+          "ms_per_clip": 0.21026049792000676
+        }
+      },
+      "n_params": null,
+      "train_seconds": 0.12433671951293945
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "description": "Fine-tuned wav2vec2-base (self-supervised, 95M params)",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.7157802964254577,
+          "uar": 0.7173255529756813,
+          "macro_f1": 0.7171050553578578,
+          "per_class_f1": {
+            "neutral": 0.7854984894259819,
+            "happy": 0.7072463768115942,
+            "sad": 0.6699751861042184,
+            "angry": 0.8,
+            "fear": 0.6472019464720195,
+            "disgust": 0.6927083333333334
+          },
+          "confusion_matrix": [
+            [
+              130,
+              2,
+              17,
+              3,
+              12,
+              3
+            ],
+            [
+              8,
+              122,
+              5,
+              26,
+              26,
+              9
+            ],
+            [
+              7,
+              3,
+              135,
+              3,
+              26,
+              22
+            ],
+            [
+              4,
+              8,
+              4,
+              168,
+              4,
+              8
+            ],
+            [
+              10,
+              8,
+              25,
+              7,
+              133,
+              13
+            ],
+            [
+              5,
+              6,
+              21,
+              17,
+              14,
+              133
+            ]
+          ],
+          "ms_per_clip": 5.51876984374255
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.7556818181818182,
+          "uar": 0.75,
+          "macro_f1": 0.742830809085062,
+          "per_class_f1": {
+            "neutral": 0.6666666666666666,
+            "happy": 0.6037735849056604,
+            "sad": 0.6909090909090909,
+            "angry": 0.7619047619047619,
+            "fear": 0.8484848484848485,
+            "disgust": 0.8852459016393442
+          },
+          "confusion_matrix": [
+            [
+              11,
+              0,
+              2,
+              3,
+              0,
+              0
+            ],
+            [
+              1,
+              16,
+              0,
+              12,
+              3,
+              0
+            ],
+            [
+              5,
+              3,
+              19,
+              0,
+              3,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              2,
+              2,
+              0,
+              28,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              5,
+              0,
+              27
+            ]
+          ],
+          "ms_per_clip": 5.535228685899215
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.7210884353741497,
+          "uar": 0.7227135461604832,
+          "macro_f1": 0.7214143370876483,
+          "per_class_f1": {
+            "neutral": 0.7747252747252747,
+            "happy": 0.6934673366834171,
+            "sad": 0.6724890829694323,
+            "angry": 0.7936507936507936,
+            "fear": 0.6750524109014675,
+            "disgust": 0.7191011235955056
+          },
+          "confusion_matrix": [
+            [
+              141,
+              2,
+              19,
+              6,
+              12,
+              3
+            ],
+            [
+              9,
+              138,
+              5,
+              38,
+              29,
+              9
+            ],
+            [
+              12,
+              6,
+              154,
+              3,
+              29,
+              24
+            ],
+            [
+              4,
+              8,
+              4,
+              200,
+              4,
+              8
+            ],
+            [
+              10,
+              10,
+              27,
+              7,
+              161,
+              13
+            ],
+            [
+              5,
+              6,
+              21,
+              22,
+              14,
+              160
+            ]
+          ],
+          "ms_per_clip": 5.55491231196051
+        }
+      },
+      "n_params": 94570131,
+      "train_seconds": 1976.1260056495667
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "description": "Fine-tuned wav2vec2-base (self-supervised, 95M params)",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.7175239755884917,
+          "uar": 0.7181402501120209,
+          "macro_f1": 0.718915356130107,
+          "per_class_f1": {
+            "neutral": 0.7725856697819314,
+            "happy": 0.7211267605633803,
+            "sad": 0.6911764705882353,
+            "angry": 0.7924528301886793,
+            "fear": 0.645933014354067,
+            "disgust": 0.6902173913043478
+          },
+          "confusion_matrix": [
+            [
+              124,
+              4,
+              18,
+              9,
+              11,
+              1
+            ],
+            [
+              5,
+              128,
+              7,
+              23,
+              29,
+              4
+            ],
+            [
+              9,
+              1,
+              141,
+              3,
+              23,
+              19
+            ],
+            [
+              2,
+              8,
+              3,
+              168,
+              7,
+              8
+            ],
+            [
+              8,
+              10,
+              25,
+              5,
+              135,
+              13
+            ],
+            [
+              6,
+              8,
+              18,
+              20,
+              17,
+              127
+            ]
+          ],
+          "ms_per_clip": 5.522315566604202
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.5738636363636364,
+          "uar": 0.5833333333333334,
+          "macro_f1": 0.5483257083118387,
+          "per_class_f1": {
+            "neutral": 0.7333333333333333,
+            "happy": 0.16216216216216217,
+            "sad": 0.5306122448979592,
+            "angry": 0.6019417475728155,
+            "fear": 0.6904761904761905,
+            "disgust": 0.5714285714285714
+          },
+          "confusion_matrix": [
+            [
+              11,
+              0,
+              2,
+              3,
+              0,
+              0
+            ],
+            [
+              2,
+              3,
+              0,
+              16,
+              9,
+              2
+            ],
+            [
+              1,
+              2,
+              13,
+              5,
+              10,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              31,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              3,
+              29,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              13,
+              3,
+              14
+            ]
+          ],
+          "ms_per_clip": 5.527373064648022
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.6984126984126984,
+          "uar": 0.6997052056370435,
+          "macro_f1": 0.6994037320281365,
+          "per_class_f1": {
+            "neutral": 0.7692307692307693,
+            "happy": 0.6683673469387755,
+            "sad": 0.6739606126914661,
+            "angry": 0.7552182163187856,
+            "fear": 0.6533864541832669,
+            "disgust": 0.6762589928057554
+          },
+          "confusion_matrix": [
+            [
+              135,
+              4,
+              20,
+              12,
+              11,
+              1
+            ],
+            [
+              7,
+              131,
+              7,
+              39,
+              38,
+              6
+            ],
+            [
+              10,
+              3,
+              154,
+              8,
+              33,
+              20
+            ],
+            [
+              2,
+              8,
+              3,
+              199,
+              8,
+              8
+            ],
+            [
+              8,
+              10,
+              25,
+              8,
+              164,
+              13
+            ],
+            [
+              6,
+              8,
+              20,
+              33,
+              20,
+              141
+            ]
+          ],
+          "ms_per_clip": 5.555799488577983
+        }
+      },
+      "n_params": 94570131,
+      "train_seconds": 1741.5785241127014
+    },
+    {
+      "model": "wav2vec2",
+      "kind": "ssl",
+      "description": "Fine-tuned wav2vec2-base (self-supervised, 95M params)",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.4106364428945074,
+          "uar": 0.40124852336144046,
+          "macro_f1": 0.36855764091580734,
+          "per_class_f1": {
+            "neutral": 0.05813953488372093,
+            "happy": 0.35023041474654376,
+            "sad": 0.2737642585551331,
+            "angry": 0.5974025974025974,
+            "fear": 0.4482269503546099,
+            "disgust": 0.4835820895522388
+          },
+          "confusion_matrix": [
+            [
+              5,
+              55,
+              17,
+              17,
+              65,
+              8
+            ],
+            [
+              0,
+              76,
+              1,
+              26,
+              77,
+              16
+            ],
+            [
+              0,
+              12,
+              36,
+              1,
+              135,
+              12
+            ],
+            [
+              0,
+              52,
+              1,
+              115,
+              15,
+              13
+            ],
+            [
+              0,
+              21,
+              2,
+              6,
+              158,
+              9
+            ],
+            [
+              0,
+              22,
+              10,
+              24,
+              59,
+              81
+            ]
+          ],
+          "ms_per_clip": 5.532233322196768
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.7386363636363636,
+          "uar": 0.75,
+          "macro_f1": 0.7299918518497082,
+          "per_class_f1": {
+            "neutral": 0.7567567567567568,
+            "happy": 0.711864406779661,
+            "sad": 0.5769230769230769,
+            "angry": 0.7901234567901234,
+            "fear": 0.7037037037037037,
+            "disgust": 0.8405797101449275
+          },
+          "confusion_matrix": [
+            [
+              14,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              21,
+              1,
+              10,
+              0,
+              0
+            ],
+            [
+              7,
+              2,
+              15,
+              0,
+              3,
+              5
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              4,
+              3,
+              3,
+              19,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              3,
+              0,
+              29
+            ]
+          ],
+          "ms_per_clip": 5.550853230736472
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.45427059712774,
+          "uar": 0.4427427859265651,
+          "macro_f1": 0.42349928974521345,
+          "per_class_f1": {
+            "neutral": 0.18181818181818182,
+            "happy": 0.3935091277890467,
+            "sad": 0.3238095238095238,
+            "angry": 0.630901287553648,
+            "fear": 0.466403162055336,
+            "disgust": 0.5445544554455446
+          },
+          "confusion_matrix": [
+            [
+              19,
+              55,
+              18,
+              18,
+              65,
+              8
+            ],
+            [
+              0,
+              97,
+              2,
+              36,
+              77,
+              16
+            ],
+            [
+              7,
+              14,
+              51,
+              1,
+              138,
+              17
+            ],
+            [
+              0,
+              52,
+              1,
+              147,
+              15,
+              13
+            ],
+            [
+              0,
+              25,
+              5,
+              9,
+              177,
+              12
+            ],
+            [
+              0,
+              22,
+              10,
+              27,
+              59,
+              110
+            ]
+          ],
+          "ms_per_clip": 5.553411518365077
+        }
+      },
+      "n_params": 94570131,
+      "train_seconds": 260.48975253105164
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "description": "Fine-tuned WavLM-base-plus",
+      "train_dataset": "combined",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.7297297297297297,
+          "uar": 0.7281253818892827,
+          "macro_f1": 0.732286092364034,
+          "per_class_f1": {
+            "neutral": 0.7655172413793103,
+            "happy": 0.7058823529411765,
+            "sad": 0.6846361185983828,
+            "angry": 0.8320802005012531,
+            "fear": 0.6708074534161491,
+            "disgust": 0.7347931873479319
+          },
+          "confusion_matrix": [
+            [
+              111,
+              10,
+              17,
+              6,
+              21,
+              2
+            ],
+            [
+              1,
+              120,
+              1,
+              19,
+              43,
+              12
+            ],
+            [
+              6,
+              0,
+              127,
+              2,
+              35,
+              26
+            ],
+            [
+              1,
+              4,
+              1,
+              166,
+              12,
+              12
+            ],
+            [
+              2,
+              6,
+              14,
+              0,
+              162,
+              12
+            ],
+            [
+              2,
+              4,
+              15,
+              10,
+              14,
+              151
+            ]
+          ],
+          "ms_per_clip": 6.564404305522091
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.7727272727272727,
+          "uar": 0.7447916666666666,
+          "macro_f1": 0.7483566559589147,
+          "per_class_f1": {
+            "neutral": 0.56,
+            "happy": 0.75,
+            "sad": 0.6865671641791045,
+            "angry": 0.8493150684931506,
+            "fear": 0.7619047619047619,
+            "disgust": 0.8823529411764706
+          },
+          "confusion_matrix": [
+            [
+              7,
+              3,
+              4,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              21,
+              2,
+              6,
+              2,
+              1
+            ],
+            [
+              2,
+              0,
+              23,
+              0,
+              5,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              31,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              6,
+              0,
+              24,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              2,
+              0,
+              30
+            ]
+          ],
+          "ms_per_clip": 6.576636975461787
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.7354497354497355,
+          "uar": 0.7324681238615666,
+          "macro_f1": 0.7363441065926776,
+          "per_class_f1": {
+            "neutral": 0.7492063492063492,
+            "happy": 0.7121212121212122,
+            "sad": 0.684931506849315,
+            "angry": 0.8347457627118644,
+            "fear": 0.6813186813186813,
+            "disgust": 0.755741127348643
+          },
+          "confusion_matrix": [
+            [
+              118,
+              13,
+              21,
+              8,
+              21,
+              2
+            ],
+            [
+              1,
+              141,
+              3,
+              25,
+              45,
+              13
+            ],
+            [
+              8,
+              0,
+              150,
+              2,
+              40,
+              28
+            ],
+            [
+              1,
+              4,
+              1,
+              197,
+              12,
+              13
+            ],
+            [
+              2,
+              6,
+              20,
+              0,
+              186,
+              14
+            ],
+            [
+              2,
+              4,
+              15,
+              12,
+              14,
+              181
+            ]
+          ],
+          "ms_per_clip": 6.5969907237288625
+        }
+      },
+      "n_params": 94580355,
+      "train_seconds": 1366.2574396133423
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "description": "Fine-tuned WavLM-base-plus",
+      "train_dataset": "cremad",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.7244986922406277,
+          "uar": 0.7228756772169945,
+          "macro_f1": 0.7278210953532792,
+          "per_class_f1": {
+            "neutral": 0.7692307692307693,
+            "happy": 0.7608695652173914,
+            "sad": 0.6736292428198434,
+            "angry": 0.8009592326139089,
+            "fear": 0.6505494505494506,
+            "disgust": 0.7116883116883117
+          },
+          "confusion_matrix": [
+            [
+              110,
+              8,
+              23,
+              10,
+              15,
+              1
+            ],
+            [
+              1,
+              140,
+              3,
+              18,
+              32,
+              2
+            ],
+            [
+              4,
+              1,
+              129,
+              2,
+              32,
+              28
+            ],
+            [
+              0,
+              3,
+              2,
+              167,
+              16,
+              8
+            ],
+            [
+              2,
+              11,
+              16,
+              6,
+              148,
+              13
+            ],
+            [
+              2,
+              9,
+              14,
+              18,
+              16,
+              137
+            ]
+          ],
+          "ms_per_clip": 6.541324888194449
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.625,
+          "uar": 0.625,
+          "macro_f1": 0.5944055502400517,
+          "per_class_f1": {
+            "neutral": 0.7407407407407407,
+            "happy": 0.2631578947368421,
+            "sad": 0.4489795918367347,
+            "angry": 0.7619047619047619,
+            "fear": 0.6736842105263158,
+            "disgust": 0.6779661016949152
+          },
+          "confusion_matrix": [
+            [
+              10,
+              0,
+              5,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              5,
+              1,
+              12,
+              11,
+              3
+            ],
+            [
+              1,
+              1,
+              11,
+              0,
+              15,
+              4
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              32,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              8,
+              4,
+              20
+            ]
+          ],
+          "ms_per_clip": 6.598770618438721
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.7112622826908541,
+          "uar": 0.7094358163167481,
+          "macro_f1": 0.7142284774617553,
+          "per_class_f1": {
+            "neutral": 0.7667731629392971,
+            "happy": 0.7142857142857143,
+            "sad": 0.6481481481481481,
+            "angry": 0.7944111776447106,
+            "fear": 0.6545454545454545,
+            "disgust": 0.7072072072072072
+          },
+          "confusion_matrix": [
+            [
+              120,
+              8,
+              28,
+              10,
+              16,
+              1
+            ],
+            [
+              1,
+              145,
+              4,
+              30,
+              43,
+              5
+            ],
+            [
+              5,
+              2,
+              140,
+              2,
+              47,
+              32
+            ],
+            [
+              0,
+              3,
+              2,
+              199,
+              16,
+              8
+            ],
+            [
+              2,
+              11,
+              16,
+              6,
+              180,
+              13
+            ],
+            [
+              2,
+              9,
+              14,
+              26,
+              20,
+              157
+            ]
+          ],
+          "ms_per_clip": 6.592961395678877
+        }
+      },
+      "n_params": 94580355,
+      "train_seconds": 1424.1825346946716
+    },
+    {
+      "model": "wavlm",
+      "kind": "ssl",
+      "description": "Fine-tuned WavLM-base-plus",
+      "train_dataset": "ravdess",
+      "test": {
+        "cremad": {
+          "n": 1147,
+          "accuracy": 0.4768962510897995,
+          "uar": 0.4674986761171534,
+          "macro_f1": 0.45088820805902197,
+          "per_class_f1": {
+            "neutral": 0.17391304347826086,
+            "happy": 0.3939393939393939,
+            "sad": 0.47191011235955055,
+            "angry": 0.6548223350253807,
+            "fear": 0.49658314350797267,
+            "disgust": 0.514161220043573
+          },
+          "confusion_matrix": [
+            [
+              16,
+              76,
+              39,
+              5,
+              19,
+              12
+            ],
+            [
+              0,
+              91,
+              7,
+              23,
+              47,
+              28
+            ],
+            [
+              0,
+              24,
+              84,
+              2,
+              36,
+              50
+            ],
+            [
+              1,
+              30,
+              1,
+              129,
+              15,
+              20
+            ],
+            [
+              0,
+              22,
+              19,
+              11,
+              109,
+              35
+            ],
+            [
+              0,
+              23,
+              10,
+              28,
+              17,
+              118
+            ]
+          ],
+          "ms_per_clip": 6.595881378120615
+        },
+        "ravdess": {
+          "n": 176,
+          "accuracy": 0.8238636363636364,
+          "uar": 0.8229166666666666,
+          "macro_f1": 0.8210338392553664,
+          "per_class_f1": {
+            "neutral": 0.8125,
+            "happy": 0.8070175438596491,
+            "sad": 0.7333333333333333,
+            "angry": 0.8421052631578947,
+            "fear": 0.8524590163934426,
+            "disgust": 0.8787878787878788
+          },
+          "confusion_matrix": [
+            [
+              13,
+              0,
+              3,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              23,
+              2,
+              7,
+              0,
+              0
+            ],
+            [
+              3,
+              2,
+              22,
+              0,
+              3,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              32,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              2,
+              26,
+              3
+            ],
+            [
+              0,
+              0,
+              0,
+              3,
+              0,
+              29
+            ]
+          ],
+          "ms_per_clip": 6.608973849903454
+        },
+        "combined": {
+          "n": 1323,
+          "accuracy": 0.5238095238095238,
+          "uar": 0.5117917745182629,
+          "macro_f1": 0.5010514829872922,
+          "per_class_f1": {
+            "neutral": 0.26851851851851855,
+            "happy": 0.44015444015444016,
+            "sad": 0.5096153846153846,
+            "angry": 0.6851063829787234,
+            "fear": 0.5429141716566867,
+            "disgust": 0.56
+          },
+          "confusion_matrix": [
+            [
+              29,
+              76,
+              42,
+              5,
+              19,
+              12
+            ],
+            [
+              0,
+              114,
+              9,
+              30,
+              47,
+              28
+            ],
+            [
+              3,
+              26,
+              106,
+              2,
+              39,
+              52
+            ],
+            [
+              1,
+              30,
+              1,
+              161,
+              15,
+              20
+            ],
+            [
+              0,
+              21,
+              20,
+              13,
+              136,
+              38
+            ],
+            [
+              0,
+              23,
+              10,
+              31,
+              17,
+              147
+            ]
+          ],
+          "ms_per_clip": 6.587281338842367
+        }
+      },
+      "n_params": 94580355,
+      "train_seconds": 229.05996799468994
     }
   ]
 }

@@ -3,7 +3,7 @@
 [![CI](https://github.com/Sanjeev2004/Speech-Emotion-Recognization/actions/workflows/ci.yml/badge.svg)](https://github.com/Sanjeev2004/Speech-Emotion-Recognization/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Live demo](https://img.shields.io/badge/demo-Vercel-black)](https://ser-frontend-beta.vercel.app)
-[![UAR](https://img.shields.io/badge/CREMA--D%20UAR-0.529-informational)](reports/leaderboard.md)
+[![UAR](https://img.shields.io/badge/UAR%20(combined)-0.650-informational)](reports/leaderboard.md)
 
 Detect the emotion in a voice clip: **neutral, happy, sad, angry, fear or disgust**.
 
@@ -26,7 +26,7 @@ This project trains and compares machine learning models on two public emotional
 ## Table of contents
 
 1. [What the project does](#1-what-the-project-does)
-2. [Results so far](#2-results-so-far)
+2. [Results](#2-results)
 3. [Key concepts in plain words](#3-key-concepts-in-plain-words)
 4. [System architecture](#4-system-architecture)
 5. [Repository structure](#5-repository-structure)
@@ -66,51 +66,114 @@ The user flow:
 
 ---
 
-## 2. Results so far
+## 2. Results
 
-**First run:** CREMA-D only, trained on CPU, so no GPU models yet. The test set holds 14 actors (1,147 clips) that the models never saw during training. Random guessing among 6 emotions scores about 16.7%.
+**Full sweep on a Kaggle T4 GPU:** all 9 models, each trained on RAVDESS, CREMA-D and both combined, then tested on every test set. Test sets are speaker-independent: the actors in them never appear in training. Random guessing among 6 emotions scores about 16.7%.
+
+**UAR** (unweighted average recall) is the main metric: the mean of the per-emotion recalls. It is fairer than plain accuracy because the emotions are not equally common.
+
+### Trained and tested on combined (RAVDESS + CREMA-D, 1,323 test clips)
 
 | Rank | Model | Accuracy | UAR | Macro-F1 | Parameters |
 |---|---|---|---|---|---|
-| 1 | BiLSTM + attention | 0.526 | **0.529** | 0.522 | 0.63 M |
-| 2 | SVM (RBF) | 0.499 | 0.498 | 0.496 | - |
-| 3 | Random Forest | 0.477 | 0.479 | 0.457 | - |
+| 1 | HuBERT | 0.743 | **0.746** | 0.743 | 94.57 M |
+| 2 | WavLM | 0.735 | 0.732 | 0.736 | 94.58 M |
+| 3 | wav2vec2 | 0.721 | 0.723 | 0.721 | 94.57 M |
+| 4 | CRNN + attention (deployed) | 0.647 | 0.650 | 0.646 | 0.75 M |
+| 5 | CNN-LSTM | 0.641 | 0.644 | 0.641 | 1.34 M |
+| 6 | CNN (2D) | 0.640 | 0.643 | 0.637 | 1.17 M |
+| 7 | BiLSTM + attention | 0.559 | 0.559 | 0.556 | 0.63 M |
+| 8 | SVM (RBF) | 0.484 | 0.482 | 0.482 | - |
+| 9 | Random Forest | 0.468 | 0.469 | 0.453 | - |
 
-![Model comparison](reports/uar_by_model.png)
+### Trained and tested on CREMA-D
 
-**Per-emotion F1 of the deployed model (BiLSTM, CREMA-D test set):**
+| Rank | Model | Accuracy | UAR | Macro-F1 | Parameters |
+|---|---|---|---|---|---|
+| 1 | HuBERT | 0.728 | **0.730** | 0.728 | 94.57 M |
+| 2 | WavLM | 0.724 | 0.723 | 0.728 | 94.58 M |
+| 3 | wav2vec2 | 0.718 | 0.718 | 0.719 | 94.57 M |
+| 4 | CRNN + attention | 0.626 | 0.627 | 0.626 | 0.75 M |
+| 5 | CNN-LSTM | 0.593 | 0.595 | 0.591 | 1.34 M |
+| 6 | CNN (2D) | 0.584 | 0.585 | 0.583 | 1.17 M |
+| 7 | BiLSTM + attention | 0.563 | 0.566 | 0.559 | 0.63 M |
+| 8 | SVM (RBF) | 0.499 | 0.498 | 0.496 | - |
+| 9 | Random Forest | 0.473 | 0.475 | 0.454 | - |
+
+### Trained and tested on RAVDESS
+
+| Rank | Model | Accuracy | UAR | Macro-F1 | Parameters |
+|---|---|---|---|---|---|
+| 1 | WavLM | 0.824 | **0.823** | 0.821 | 94.58 M |
+| 2 | HuBERT | 0.801 | 0.797 | 0.796 | 94.57 M |
+| 3 | wav2vec2 | 0.739 | 0.750 | 0.730 | 94.57 M |
+| 4 | CNN-LSTM | 0.693 | 0.698 | 0.687 | 1.34 M |
+| 5 | CRNN + attention | 0.665 | 0.677 | 0.648 | 0.75 M |
+| 6 | BiLSTM + attention | 0.602 | 0.594 | 0.584 | 0.63 M |
+| 7 | CNN (2D) | 0.562 | 0.557 | 0.531 | 1.17 M |
+| 8 | Random Forest | 0.511 | 0.479 | 0.474 | - |
+| 9 | SVM (RBF) | 0.472 | 0.438 | 0.424 | - |
+
+![UAR by model](reports/uar_by_model.png)
+
+### Cross-dataset UAR (train → test)
+
+How well a model trained on one dataset works on another one.
+
+| Model | combined → CREMA-D | combined → RAVDESS | CREMA-D → combined | CREMA-D → RAVDESS | RAVDESS → combined | RAVDESS → CREMA-D |
+|---|---|---|---|---|---|---|
+| HuBERT | **0.742** | **0.760** | **0.725** | **0.703** | 0.458 | 0.410 |
+| WavLM | 0.728 | 0.745 | 0.709 | 0.625 | **0.512** | **0.467** |
+| wav2vec2 | 0.717 | 0.750 | 0.700 | 0.583 | 0.443 | 0.401 |
+| CRNN + attention | 0.637 | 0.729 | 0.597 | 0.375 | 0.333 | 0.281 |
+| CNN-LSTM | 0.633 | 0.729 | 0.564 | 0.333 | 0.344 | 0.287 |
+| CNN (2D) | 0.632 | 0.714 | 0.552 | 0.312 | 0.260 | 0.216 |
+| BiLSTM + attention | 0.559 | 0.531 | 0.522 | 0.219 | 0.261 | 0.210 |
+| SVM (RBF) | 0.487 | 0.422 | 0.467 | 0.255 | 0.251 | 0.220 |
+| Random Forest | 0.477 | 0.391 | 0.441 | 0.203 | 0.251 | 0.215 |
+
+![Cross-dataset UAR](reports/cross_dataset.png)
+
+### The deployed model: CRNN + attention (combined)
+
+`crnn_attention__combined`: 0.75 M parameters, 3.0 MB ONNX, combined test UAR **0.650**, about 0.3 ms per clip on the GPU.
+
+**Per-emotion F1 (combined test set):**
 
 | Neutral | Happy | Sad | Angry | Fear | Disgust |
 |---|---|---|---|---|---|
-| 0.604 | 0.403 | 0.538 | 0.680 | 0.412 | 0.492 |
+| 0.691 | 0.579 | 0.584 | 0.754 | 0.624 | 0.644 |
 
-**Confusion matrix of the BiLSTM** (rows = true emotion, columns = predicted):
+**Confusion matrix** (rows = true emotion, columns = predicted):
 
 | true \ predicted | neutral | happy | sad | angry | fear | disgust |
 |---|---|---|---|---|---|---|
-| **neutral** | **109** | 8 | 24 | 5 | 15 | 6 |
-| **happy** | 16 | **75** | 14 | 35 | 33 | 23 |
-| **sad** | 32 | 5 | **113** | 2 | 7 | 37 |
-| **angry** | 7 | 26 | 1 | **140** | 4 | 18 |
-| **fear** | 14 | 38 | 47 | 11 | **69** | 17 |
-| **disgust** | 16 | 24 | 25 | 23 | 11 | **97** |
+| **neutral** | **135** | 11 | 10 | 7 | 17 | 3 |
+| **happy** | 11 | **127** | 8 | 32 | 35 | 15 |
+| **sad** | 36 | 7 | **120** | 3 | 31 | 31 |
+| **angry** | 2 | 25 | 5 | **181** | 8 | 7 |
+| **fear** | 10 | 21 | 27 | 5 | **152** | 13 |
+| **disgust** | 14 | 20 | 13 | 24 | 16 | **141** |
 
 **How to read this:**
 
 - **Angry** is the easiest emotion to detect: it is loud and high-energy.
-- **Happy is often confused with angry.** Both are high-energy ("high arousal").
-- **Fear is often confused with sad.** Both have a shaky, low-energy voice.
-- This pattern is well known in speech emotion research. Models that understand speech better, such as wav2vec2, usually reduce it.
+- **Happy is often confused with angry and fear.** All three are high-energy ("high arousal").
+- **Sad is often confused with neutral, fear and disgust.** These are quieter, lower-energy voices.
+- This pattern is well known in speech emotion research. The self-supervised models (HuBERT, WavLM, wav2vec2) understand speech better and reduce it.
 
-**Still to run (needs a GPU, see [section 13](#13-training-all-models-on-kaggle)):**
+Full numbers, including per-run confusion matrices, are in `reports/leaderboard.md`, `reports/leaderboard.csv` and `reports/leaderboard.json`.
 
-- CNN, CNN-LSTM, CRNN, wav2vec2, HuBERT and WavLM
-- All runs on RAVDESS and on the combined data
-- Cross-dataset tests
+### Which model should I pick?
 
-After that run, replace `reports/` and `backend/models/`, and the website's comparison tab updates automatically.
+| Goal | Pick | Why |
+|---|---|---|
+| **Best accuracy** | **HuBERT** (combined UAR 0.746) or **WavLM** (best on RAVDESS, UAR 0.823, and the best transfer from RAVDESS to other data) | About 95 M parameters each. They need a GPU or a large CPU machine, and are too big for a 512 MB free-tier server. |
+| **Deployment on a small server** | **CRNN + attention** (UAR 0.650, 0.75 M parameters, 3 MB ONNX) | About 10 UAR points below the self-supervised models at roughly 1/125 of the size. **CNN-LSTM** (0.644) and **CNN 2D** (0.643) are close alternatives. |
+| **Skip for production** | BiLSTM (0.559), SVM (0.482), Random Forest (0.469) | Useful only as baselines. |
 
-Full numbers are in `reports/leaderboard.md`, `reports/leaderboard.csv` and `reports/leaderboard.json`.
+- **Training data matters: train on the combined data.** Models trained only on RAVDESS transfer badly (UAR 0.21–0.51 on other data), because RAVDESS is small (24 actors) and acted.
+- **UAR** (unweighted average recall, the mean of the per-emotion recalls) is the metric to compare. The classes are imbalanced, so accuracy alone can hide a weak emotion.
 
 ---
 
@@ -545,7 +608,7 @@ curl -F "file=@hello.wav" https://ser-backend-bice.vercel.app/api/predict
 
 ```json
 {
-  "model": "bilstm__cremad",
+  "model": "crnn_attention__combined",
   "emotion": "angry",
   "confidence": 0.71,
   "probabilities": {"neutral": 0.03, "happy": 0.12, "sad": 0.02, "angry": 0.71, "fear": 0.04, "disgust": 0.08},
@@ -678,12 +741,11 @@ cd frontend && npm run build
 - **Acted speech.** Both datasets use actors reading fixed sentences. Real conversations are subtler, so expect lower accuracy on everyday speech.
 - **English only**, mostly North American accents.
 - **Only 6 emotions.** Calm, surprise, contempt and mixed emotions are not modelled.
-- **The current deployed model is CPU-trained on CREMA-D only.** The GPU run should improve it, and SSL models typically do better on this task.
+- **The deployed model is the small CRNN** (UAR 0.650 on the combined test set). The self-supervised models score about 10 UAR points higher but are too large for the free server.
 - **No speaker or gender adaptation**, and no noise-robustness training beyond light augmentation.
 
 **Ideas for future work:**
 
-- Run the full Kaggle sweep and add the cross-dataset results.
 - Distil a wav2vec2 model into a small CNN for deployment.
 - Add more corpora (TESS, SAVEE, IEMOCAP) and multilingual data.
 - Add a valence/arousal output (positive vs negative, calm vs excited) as well as categories.
